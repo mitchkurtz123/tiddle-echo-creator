@@ -1,0 +1,73 @@
+
+import React from 'react';
+import { ArrowRight } from 'lucide-react';
+
+const Hero: React.FC = () => {
+  return (
+    <div className="container mx-auto px-4 md:px-8 py-16 md:py-24">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div className="space-y-8 animate-fade-in">
+          <div className="inline-flex items-center bg-gray-100 rounded-full px-4 py-1.5 text-sm text-gray-700">
+            <span className="bg-tiddle-purple text-white px-2 py-0.5 rounded-full text-xs font-medium mr-2">NEW</span>
+            <span>Talent-driven social media success</span>
+          </div>
+          
+          <div className="space-y-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+              Your Shortcut to <br />
+              <span className="text-tiddle-purple">Influence</span>
+            </h1>
+            
+            <p className="text-gray-600 text-lg md:text-xl max-w-md">
+              Strategic talent management built for those who never back down from creating engaging content.
+            </p>
+          </div>
+          
+          <div className="flex flex-col sm:flex-row gap-4">
+            <button className="button-primary">
+              Book a consultation <ArrowRight className="w-4 h-4" />
+            </button>
+            <button className="button-secondary">
+              View our talent
+            </button>
+          </div>
+          
+          <div className="space-y-3">
+            <div className="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" className="checkmark h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Cross-platform growth strategies</span>
+            </div>
+            <div className="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" className="checkmark h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Partnership and sponsorship deals</span>
+            </div>
+            <div className="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" className="checkmark h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Personal brand development</span>
+            </div>
+          </div>
+        </div>
+        
+        <div className="relative hidden md:block">
+          <div className="absolute -top-4 -left-4 w-24 h-24 bg-tiddle-purple/20 rounded-full"></div>
+          <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-tiddle-purple/10 rounded-full"></div>
+          <div className="relative z-10 overflow-hidden rounded-xl shadow-2xl animate-fade-in">
+            <img 
+              src="/lovable-uploads/7d9910c6-cd6c-4699-b901-e70693d0c5e7.png" 
+              alt="Social media influencer" 
+              className="w-full h-auto object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Hero;
