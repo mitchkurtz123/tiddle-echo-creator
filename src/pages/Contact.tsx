@@ -10,31 +10,63 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { toast } from '@/components/ui/sonner';
+import emailjs from 'emailjs-com';
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters" }),
   username: z.string().min(3, { message: "Username must be at least 3 characters" }),
   message: z.string().min(10, { message: "Message must be at least 10 characters" }),
+  email: z.string().email({ message: "Please enter a valid email address" }),
 });
 
 type FormValues = z.infer<typeof formSchema>;
 
 const Contact: React.FC = () => {
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
+  
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
       username: "",
       message: "",
+      email: "",
     },
   });
 
-  const onSubmit = (data: FormValues) => {
-    toast.success("Message sent successfully!", {
-      description: "We'll get back to you as soon as possible.",
-    });
-    console.log(data);
-    form.reset();
+  const onSubmit = async (data: FormValues) => {
+    setIsSubmitting(true);
+    
+    try {
+      // Replace these with your actual EmailJS service, template, and user IDs
+      const templateParams = {
+        from_name: data.name,
+        from_email: data.email,
+        username: data.username,
+        message: data.message,
+      };
+      
+      // You'll need to sign up for EmailJS and replace these IDs
+      await emailjs.send(
+        'YOUR_SERVICE_ID', 
+        'YOUR_TEMPLATE_ID', 
+        templateParams,
+        'YOUR_USER_ID'
+      );
+      
+      toast.success("Message sent successfully!", {
+        description: "We'll get back to you as soon as possible.",
+      });
+      console.log("Form submitted:", data);
+      form.reset();
+    } catch (error) {
+      console.error("Error sending email:", error);
+      toast.error("Failed to send message", {
+        description: "Please try again later or contact us directly.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -62,6 +94,25 @@ const Contact: React.FC = () => {
                           placeholder="Enter your name" 
                           {...field}
                           className="border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100" 
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-gray-700 dark:text-gray-200">Email</FormLabel>
+                      <FormControl>
+                        <Input 
+                          type="email"
+                          placeholder="your.email@example.com" 
+                          {...field} 
+                          className="border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100"
                         />
                       </FormControl>
                       <FormMessage />
@@ -108,8 +159,9 @@ const Contact: React.FC = () => {
                 <Button 
                   type="submit" 
                   className="w-full bg-tiddle-purple hover:bg-tiddle-purple/90 text-white"
+                  disabled={isSubmitting}
                 >
-                  Send Message
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             </Form>
