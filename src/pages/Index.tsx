@@ -4,6 +4,7 @@ import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import ClientLogos from '@/components/ClientLogos';
 import TopCreators from '@/components/TopCreators';
+import Footer from '@/components/Footer';
 
 const Index: React.FC = () => {
   return (
@@ -13,6 +14,7 @@ const Index: React.FC = () => {
         <Hero />
         <ClientLogos />
         <TopCreators />
+        <Footer />
       </div>
     </div>
   );
