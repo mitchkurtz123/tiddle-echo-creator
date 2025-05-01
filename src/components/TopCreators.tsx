@@ -46,7 +46,7 @@ const TopCreators: React.FC = () => {
   return (
     <div className="py-16 bg-gradient-to-b from-white to-blue-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-[#40377A] mb-12 font-sans">Our Top Creators</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-tiddle-purple mb-12 font-sans">Our Top Creators</h2>
         
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
           {creators.map((creator, index) => (
