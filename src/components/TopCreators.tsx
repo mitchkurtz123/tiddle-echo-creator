@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { Card } from "@/components/ui/card";
@@ -44,7 +43,7 @@ const creators: Creator[] = [
 
 const TopCreators: React.FC = () => {
   return (
-    <div className="py-16 pb-24 bg-gradient-to-b from-white to-blue-50">
+    <div className="py-16 pb-36 bg-gradient-to-b from-white to-blue-50">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-tiddle-purple mb-12">
           Our Top <span className="text-tiddle-purple">Creators</span>
