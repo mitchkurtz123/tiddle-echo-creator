@@ -25,7 +25,7 @@ const ClientLogos: React.FC = () => {
     if (!api) return;
 
     const interval = setInterval(() => {
-      api.scrollNext();
+      api.scrollNext({ duration: 1500 });
     }, 3000);
 
     return () => clearInterval(interval);
@@ -40,11 +40,13 @@ const ClientLogos: React.FC = () => {
         opts={{
           align: "start",
           loop: true,
+          dragFree: true,
+          duration: 1500,
         }}
       >
         <CarouselContent className="py-4">
           {brands.map((brand, index) => (
-            <CarouselItem key={index} className="md:basis-1/4 lg:basis-1/6 flex flex-col items-center">
+            <CarouselItem key={index} className="md:basis-1/4 lg:basis-1/6 flex flex-col items-center transition-transform duration-500">
               <div className="h-10 w-10 mb-3 bg-gray-100 rounded-md flex items-center justify-center overflow-hidden">
                 <img 
                   src={brand.logo} 
