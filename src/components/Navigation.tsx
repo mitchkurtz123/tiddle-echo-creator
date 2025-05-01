@@ -3,6 +3,7 @@ import React from 'react';
 import { cn } from '@/lib/utils';
 import { ThemeToggle } from './ThemeToggle';
 import { Instagram } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface NavigationProps {
   className?: string;
@@ -13,13 +14,13 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
     <nav className={cn("w-full py-6 px-4 md:px-8", className)}>
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
-          <div className="text-2xl font-bold text-gray-800 dark:text-gray-200 mr-10">
+          <Link to="/" className="text-2xl font-bold text-gray-800 dark:text-gray-200 mr-10">
             <span className="text-tiddle-purple">Tiddle</span>.io
-          </div>
+          </Link>
           <div className="hidden md:flex space-x-8">
             <a href="#about" className="text-gray-600 dark:text-gray-300 hover:text-tiddle-purple transition-colors">About</a>
             <a href="#features" className="text-gray-600 dark:text-gray-300 hover:text-tiddle-purple transition-colors">Features</a>
-            <a href="#contact" className="text-gray-600 dark:text-gray-300 hover:text-tiddle-purple transition-colors">Contact</a>
+            <Link to="/contact" className="text-gray-600 dark:text-gray-300 hover:text-tiddle-purple transition-colors">Contact</Link>
           </div>
         </div>
         
