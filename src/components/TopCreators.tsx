@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { Card } from "@/components/ui/card";
@@ -43,17 +44,17 @@ const creators: Creator[] = [
 
 const TopCreators: React.FC = () => {
   return (
-    <div className="py-16 pb-36 bg-gradient-to-b from-white to-blue-50">
+    <div className="py-16 pb-36 bg-gradient-to-b from-white to-blue-50 dark:from-gray-800 dark:to-gray-900">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-tiddle-purple mb-12">
-          Our Top <span className="text-tiddle-purple">Creators</span>
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-tiddle-purple dark:text-tiddle-purple-light mb-12">
+          Our Top <span className="text-tiddle-purple dark:text-tiddle-purple-light">Creators</span>
         </h2>
         
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
           {creators.map((creator, index) => (
             <div key={index} className="flex flex-col items-center">
-              <div className="relative w-full aspect-[3/4] overflow-hidden rounded-3xl border-4 border-white mb-3 shadow-md bg-gradient-to-br from-blue-50 to-purple-50">
-                <div className="absolute inset-x-0 top-0 h-full rounded-3xl bg-gradient-to-br from-pink-200 to-blue-100 opacity-30"></div>
+              <div className="relative w-full aspect-[3/4] overflow-hidden rounded-3xl border-4 border-white dark:border-gray-700 mb-3 shadow-md bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-700 dark:to-gray-800">
+                <div className="absolute inset-x-0 top-0 h-full rounded-3xl bg-gradient-to-br from-pink-200 to-blue-100 dark:from-purple-900/30 dark:to-blue-900/30 opacity-30"></div>
                 <img 
                   src={creator.image} 
                   alt={creator.name}
@@ -64,7 +65,7 @@ const TopCreators: React.FC = () => {
                 href={`https://instagram.com/${creator.username.substring(1)}`}
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-tiddle-purple font-medium text-center hover:underline font-sans"
+                className="text-tiddle-purple dark:text-tiddle-purple-light font-medium text-center hover:underline font-sans"
               >
                 {creator.username}
               </a>
