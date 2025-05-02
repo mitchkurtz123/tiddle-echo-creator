@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -76,7 +77,7 @@ const Roster: React.FC = () => {
             {creators.map((creator, index) => (
               <div 
                 key={index} 
-                className="bg-gray-50 dark:bg-gray-700 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow"
+                className="bg-white dark:bg-gray-700 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow border border-gray-100 dark:border-gray-600"
               >
                 <div className="aspect-[3/4] relative overflow-hidden">
                   <img 
