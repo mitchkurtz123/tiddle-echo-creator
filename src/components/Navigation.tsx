@@ -18,7 +18,6 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
             <span className="text-tiddle-purple">Tiddle</span>.io
           </Link>
           <div className="hidden md:flex space-x-8">
-            <a href="#about" className="text-gray-600 dark:text-gray-300 hover:text-tiddle-purple transition-colors">About</a>
             <Link to="/roster" className="text-gray-600 dark:text-gray-300 hover:text-tiddle-purple transition-colors">Roster</Link>
             <Link to="/contact" className="text-gray-600 dark:text-gray-300 hover:text-tiddle-purple transition-colors">Contact</Link>
           </div>
