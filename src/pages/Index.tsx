@@ -14,7 +14,6 @@ const Index: React.FC = () => {
         <Navigation />
         <Hero />
         <ClientLogos />
-        <TopCreators />
         
         <div className="container mx-auto py-12 px-4 md:px-6">
           <div className="bg-gradient-to-r from-purple-50 to-blue-50 dark:from-gray-700 dark:to-gray-800 rounded-3xl p-8 md:p-12 text-center shadow-md">
@@ -34,6 +33,7 @@ const Index: React.FC = () => {
           </div>
         </div>
         
+        <TopCreators />
         <Footer />
       </div>
     </div>
