@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -17,42 +18,42 @@ const creators: Creator[] = [
     name: "Gianna Joyce",
     username: "@Giannamjoyce",
     bio: "Beauty & Lifestyle content creator based in NYC. Specializing in skincare reviews and daily outfit inspiration.",
-    imageUrl: "/lovable-uploads/4e16a1ad-2f86-48c8-9234-cf3d9a7e1270.png",
+    imageUrl: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
     instagram: "Giannamjoyce",
   },
   {
     name: "Saby Hesri",
     username: "@Sabyhesri",
     bio: "Travel vlogger sharing adventures from around the world. Expert in budget travel tips and local experiences.",
-    imageUrl: "/lovable-uploads/4e16a1ad-2f86-48c8-9234-cf3d9a7e1270.png",
+    imageUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=776&q=80",
     instagram: "Sabyhesri",
   },
   {
     name: "Sophie Hesri",
     username: "@Sophiehesri",
     bio: "Fitness influencer specializing in home workouts and nutrition advice. Creating accessible fitness content for all levels.",
-    imageUrl: "/lovable-uploads/4e16a1ad-2f86-48c8-9234-cf3d9a7e1270.png",
+    imageUrl: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
     instagram: "Sophiehesri",
   },
   {
     name: "Samara Ispink",
     username: "@Samaraispinkk",
     bio: "Fashion enthusiast and sustainable clothing advocate. Showcasing ethical fashion brands and styling tips.",
-    imageUrl: "/lovable-uploads/4e16a1ad-2f86-48c8-9234-cf3d9a7e1270.png",
+    imageUrl: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
     instagram: "Samaraispinkk",
   },
   {
     name: "Agga Yucita",
     username: "@Aggayucita",
     bio: "Food creator sharing quick recipes and restaurant reviews. Passionate about exploring diverse cuisines.",
-    imageUrl: "/lovable-uploads/4e16a1ad-2f86-48c8-9234-cf3d9a7e1270.png",
+    imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
     instagram: "Aggayucita",
   },
   {
     name: "Avani Reyes",
     username: "@Avanireyes",
     bio: "Tech reviewer and digital lifestyle content creator. Sharing the latest gadget reviews and productivity tips.",
-    imageUrl: "/lovable-uploads/4e16a1ad-2f86-48c8-9234-cf3d9a7e1270.png",
+    imageUrl: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
     instagram: "Avanireyes",
   },
 ];

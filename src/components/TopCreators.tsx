@@ -13,38 +13,38 @@ const creators: Creator[] = [
   {
     name: "Gianna Joyce",
     username: "@Giannamjoyce",
-    image: "/lovable-uploads/4e16a1ad-2f86-48c8-9234-cf3d9a7e1270.png",
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
   },
   {
     name: "Saby Hesri",
     username: "@Sabyhesri",
-    image: "/lovable-uploads/4e16a1ad-2f86-48c8-9234-cf3d9a7e1270.png",
+    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=776&q=80",
   },
   {
     name: "Sophie Hesri",
     username: "@Sophiehesri",
-    image: "/lovable-uploads/4e16a1ad-2f86-48c8-9234-cf3d9a7e1270.png",
+    image: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
   },
   {
     name: "Samara Ispink",
     username: "@Samaraispinkk",
-    image: "/lovable-uploads/4e16a1ad-2f86-48c8-9234-cf3d9a7e1270.png",
+    image: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
   },
   {
     name: "Agga Yucita",
     username: "@Aggayucita",
-    image: "/lovable-uploads/4e16a1ad-2f86-48c8-9234-cf3d9a7e1270.png",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
   },
   {
     name: "Avani Reyes",
     username: "@Avanireyes",
-    image: "/lovable-uploads/4e16a1ad-2f86-48c8-9234-cf3d9a7e1270.png",
+    image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
   },
 ];
 
 const TopCreators: React.FC = () => {
   return (
-    <div className="py-16 pb-36 bg-gradient-to-b from-white to-blue-50 dark:from-gray-800 dark:to-gray-900">
+    <div className="py-16 pb-36 bg-white dark:bg-gray-800">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-tiddle-purple dark:text-tiddle-purple-light mb-12">
           Our Top <span className="text-tiddle-purple dark:text-tiddle-purple-light">Creators</span>
@@ -53,8 +53,7 @@ const TopCreators: React.FC = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
           {creators.map((creator, index) => (
             <div key={index} className="flex flex-col items-center">
-              <div className="relative w-full aspect-[3/4] overflow-hidden rounded-3xl border-4 border-white dark:border-gray-700 mb-3 shadow-md bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-700 dark:to-gray-800">
-                <div className="absolute inset-x-0 top-0 h-full rounded-3xl bg-gradient-to-br from-pink-200 to-blue-100 dark:from-purple-900/30 dark:to-blue-900/30 opacity-30"></div>
+              <div className="relative w-full aspect-[3/4] overflow-hidden rounded-3xl border-4 border-white dark:border-gray-700 mb-3 shadow-md">
                 <img 
                   src={creator.image} 
                   alt={creator.username}
