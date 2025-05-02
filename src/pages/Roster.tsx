@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -82,13 +81,12 @@ const Roster: React.FC = () => {
                 <div className="aspect-[3/4] relative overflow-hidden">
                   <img 
                     src={creator.imageUrl} 
-                    alt={creator.name}
+                    alt={creator.username}
                     className="w-full h-full object-cover" 
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-1">{creator.name}</h3>
-                  <p className="text-tiddle-purple dark:text-tiddle-purple-light mb-3">{creator.username}</p>
+                  <h3 className="text-xl font-semibold text-tiddle-purple dark:text-tiddle-purple-light mb-3">{creator.username}</h3>
                   <p className="text-gray-600 dark:text-gray-300 mb-4">{creator.bio}</p>
                   <div className="flex items-center space-x-4">
                     <a 
@@ -101,7 +99,7 @@ const Roster: React.FC = () => {
                       <span className="text-sm">Instagram</span>
                     </a>
                     <a 
-                      href={`/contact?creator=${creator.name}`}
+                      href={`/contact?creator=${creator.username}`}
                       className="flex items-center text-gray-600 dark:text-gray-300 hover:text-tiddle-purple dark:hover:text-tiddle-purple-light"
                     >
                       <Mail className="h-5 w-5 mr-1" />
