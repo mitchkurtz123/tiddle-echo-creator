@@ -57,7 +57,7 @@ const TopCreators: React.FC = () => {
                 <div className="absolute inset-x-0 top-0 h-full rounded-3xl bg-gradient-to-br from-pink-200 to-blue-100 dark:from-purple-900/30 dark:to-blue-900/30 opacity-30"></div>
                 <img 
                   src={creator.image} 
-                  alt={creator.name}
+                  alt={creator.username}
                   className="absolute inset-0 w-full h-full object-cover" 
                 />
               </div>
