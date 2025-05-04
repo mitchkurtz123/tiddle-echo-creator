@@ -1,18 +1,22 @@
 
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { 
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
   type CarouselApi
 } from '@/components/ui/carousel';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 
+// Updated slideImages array with your new images
 const slideImages = [
-  "/lovable-uploads/7d9910c6-cd6c-4699-b901-e70693d0c5e7.png",
-  "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&q=80",
-  "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80",
-  "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80"
+  "/lovable-uploads/458422e2-5e4d-4d15-a8ae-8b750d7f6e30.png",
+  "/lovable-uploads/b828db6b-2c51-48bd-b5f9-6a70fad35cd1.png",
+  "/lovable-uploads/beea9f3b-5121-4d1b-8501-fafde6f2e025.png",
+  "/lovable-uploads/a0becbb8-ba80-4bff-a517-d7189e3b83dc.png"
 ];
 
 const Hero: React.FC = () => {
@@ -106,21 +110,38 @@ const Hero: React.FC = () => {
           <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-tiddle-purple/10 rounded-full"></div>
           
           <div className="relative z-10 overflow-hidden rounded-xl shadow-2xl animate-fade-in">
+            {/* Navigation controls added for easier browsing */}
             <Carousel className="w-full" setApi={setApi}>
               <CarouselContent>
                 {slideImages.map((image, index) => (
                   <CarouselItem key={index}>
-                    <div className="relative overflow-hidden rounded-xl aspect-[4/3]">
+                    <AspectRatio ratio={4/3} className="bg-muted">
                       <img 
                         src={image} 
                         alt={`Social media influencer slide ${index + 1}`} 
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover rounded-xl"
                       />
-                    </div>
+                    </AspectRatio>
                   </CarouselItem>
                 ))}
               </CarouselContent>
+              <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2" />
+              <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2" />
             </Carousel>
+            
+            {/* Simple dots navigation */}
+            <div className="flex justify-center space-x-2 mt-4">
+              {slideImages.map((_, index) => (
+                <button
+                  key={index}
+                  className={`w-2.5 h-2.5 rounded-full transition-colors ${
+                    currentSlide === index ? "bg-tiddle-purple" : "bg-gray-300"
+                  }`}
+                  onClick={() => api?.scrollTo(index)}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>
