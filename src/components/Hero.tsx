@@ -5,8 +5,6 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselPrevious,
-  CarouselNext,
   type CarouselApi
 } from '@/components/ui/carousel';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
@@ -111,7 +109,7 @@ const Hero: React.FC = () => {
           <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-tiddle-purple/10 rounded-full"></div>
           
           <div className="relative z-10 overflow-hidden rounded-xl shadow-2xl animate-fade-in">
-            {/* Navigation controls added for easier browsing */}
+            {/* Carousel without navigation arrows */}
             <Carousel className="w-full" setApi={setApi}>
               <CarouselContent>
                 {slideImages.map((image, index) => (
@@ -126,8 +124,6 @@ const Hero: React.FC = () => {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2" />
-              <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2" />
             </Carousel>
             
             {/* Simple dots navigation */}
