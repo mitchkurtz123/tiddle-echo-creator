@@ -5,17 +5,42 @@ import {
   CarouselContent, 
   CarouselItem 
 } from "@/components/ui/carousel";
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 
-// These will be replaced with your actual logo images once you upload them
+// Brand logos from uploaded images
 const brands = [
-  { name: "Instagram", logo: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=200&h=100" },
-  { name: "TikTok™", logo: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&h=100" },
-  { name: "YouTube", logo: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=200&h=100" },
-  { name: "TwitterX", logo: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=200&h=100" },
-  { name: "Meta", logo: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=200&h=100" },
-  { name: "Snapchat", logo: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=200&h=100" },
-  { name: "LinkedIn", logo: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&h=100" },
-  { name: "Pinterest", logo: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=200&h=100" }
+  { name: "PacSun", logo: "/lovable-uploads/ba9aeb41-7f74-4489-8105-b68d1e38c024.png" },
+  { name: "e.l.f.", logo: "/lovable-uploads/e82f7e30-b960-4315-aaf3-cec5643b4d71.png" },
+  { name: "White Fox", logo: "/lovable-uploads/ee120379-1b3c-4c66-80bd-085d038d5e2f.png" },
+  { name: "Prime", logo: "/lovable-uploads/dcddbc5f-8541-462b-a495-5983a821d955.png" },
+  { name: "ZeeCool", logo: "/lovable-uploads/b085c9c4-87e4-4fb2-a9d4-07c6df2c1941.png" },
+  { name: "Bloom", logo: "/lovable-uploads/07729c62-ca01-4c0b-bbd0-190078203f08.png" },
+  { name: "Shein", logo: "/lovable-uploads/327869d1-f9ca-410b-b947-0855c5fd4d6b.png" },
+  { name: "Summer Fridays", logo: "/lovable-uploads/c4b9ff63-61f2-4887-ba7d-323d2f37b75c.png" },
+  { name: "EQB", logo: "/lovable-uploads/4f155dc8-7e74-4ee6-b44f-5374a20f618e.png" },
+  { name: "Round Lab", logo: "/lovable-uploads/8faf6834-6f28-46a2-9899-aa6468b0a05f.png" },
+  { name: "Pumiey", logo: "/lovable-uploads/22664884-db33-4cb6-82cc-1fb37e153017.png" },
+  { name: "Sol De Janeiro", logo: "/lovable-uploads/8d5870c4-fa4d-45db-89c1-923e45af3fe2.png" },
+  { name: "Brand13", logo: "/lovable-uploads/8079b258-e56d-4428-81e7-332046baf506.png" },
+  { name: "GlowMode", logo: "/lovable-uploads/2d9241a9-faf6-48eb-82db-bea57133bfda.png" },
+];
+
+// This is for varying the circle colors
+const circleColors = [
+  "border-[#8E9196]", // Neutral Gray
+  "border-[#9b87f5]", // Primary Purple
+  "border-[#7E69AB]", // Secondary Purple
+  "border-[#6E59A5]", // Tertiary Purple
+  "border-[#D6BCFA]", // Light Purple
+  "border-[#F2FCE2]", // Soft Green
+  "border-[#FEF7CD]", // Soft Yellow
+  "border-[#FEC6A1]", // Soft Orange
+  "border-[#E5DEFF]", // Soft Purple
+  "border-[#FFDEE2]", // Soft Pink
+  "border-[#D3E4FD]", // Soft Blue
+  "border-[#8B5CF6]", // Vivid Purple
+  "border-[#0FA0CE]", // Bright Blue
+  "border-[#F6F6F7]", // Dark Gray
 ];
 
 const ClientLogos: React.FC = () => {
@@ -34,7 +59,7 @@ const ClientLogos: React.FC = () => {
 
   return (
     <div className="container mx-auto px-4 py-12">
-      <div className="text-gray-400 font-light text-sm mb-6">TRUSTED BY BRANDS</div>
+      <div className="text-gray-400 font-light text-sm mb-6 text-center">TRUSTED BY BRANDS</div>
       <Carousel 
         setApi={setApi} 
         className="w-full" 
@@ -47,13 +72,17 @@ const ClientLogos: React.FC = () => {
       >
         <CarouselContent className="py-4">
           {brands.map((brand, index) => (
-            <CarouselItem key={index} className="md:basis-1/4 lg:basis-1/6 flex justify-center items-center px-4">
-              <div className="h-16 flex items-center justify-center">
-                <img 
-                  src={brand.logo} 
-                  alt={`${brand.name} logo`} 
-                  className="max-h-full max-w-full object-contain" 
-                />
+            <CarouselItem key={index} className="md:basis-1/4 lg:basis-1/5 flex justify-center items-center px-4">
+              <div className={`p-0.5 rounded-full ${circleColors[index % circleColors.length]} border-2 flex items-center justify-center bg-white dark:bg-gray-900`}>
+                <div className="rounded-full h-20 w-20 sm:h-24 sm:w-24 md:h-28 md:w-28 flex items-center justify-center overflow-hidden bg-white">
+                  <AspectRatio ratio={1/1} className="w-full h-full flex items-center justify-center">
+                    <img 
+                      src={brand.logo} 
+                      alt={`${brand.name} logo`} 
+                      className="max-h-[70%] max-w-[70%] object-contain" 
+                    />
+                  </AspectRatio>
+                </div>
               </div>
             </CarouselItem>
           ))}
