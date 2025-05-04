@@ -49,11 +49,11 @@ const ClientLogos: React.FC = () => {
   // Set up auto scrolling
   useEffect(() => {
     if (!api) return;
-
+    
     const interval = setInterval(() => {
       api.scrollNext({ duration: 1500 });
     }, 3000);
-
+    
     return () => clearInterval(interval);
   }, [api]);
 
@@ -72,9 +72,9 @@ const ClientLogos: React.FC = () => {
       >
         <CarouselContent className="py-4 -ml-2">
           {brands.map((brand, index) => (
-            <CarouselItem key={index} className="md:basis-1/5 lg:basis-1/6 flex justify-center items-center pl-2">
+            <CarouselItem key={index} className="xs:basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5 xl:basis-1/6 flex justify-center items-center pl-2">
               <div className={`p-0.5 rounded-full ${circleColors[index % circleColors.length]} border-2 flex items-center justify-center bg-white dark:bg-gray-900`}>
-                <div className="rounded-full h-18 w-18 sm:h-20 sm:w-20 md:h-24 md:w-24 flex items-center justify-center overflow-hidden bg-white">
+                <div className="rounded-full h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 flex items-center justify-center overflow-hidden bg-white">
                   <AspectRatio ratio={1/1} className="w-full h-full flex items-center justify-center">
                     <img 
                       src={brand.logo} 
