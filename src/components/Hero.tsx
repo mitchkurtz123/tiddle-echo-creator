@@ -39,11 +39,16 @@ const Hero: React.FC = () => {
     if (!api) return;
     
     const interval = setInterval(() => {
-      api.scrollNext();
+      if (currentSlide === slideImages.length - 1) {
+        // If we're at the last slide, go back to the first
+        api.scrollTo(0);
+      } else {
+        api.scrollNext();
+      }
     }, 5000);
     
     return () => clearInterval(interval);
-  }, [api]);
+  }, [api, currentSlide]);
 
   return (
     <div className="container mx-auto px-4 md:px-8 py-16 md:py-24">
