@@ -64,8 +64,8 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				tiddle: {
-					purple: '#6B46C1',
-					'purple-light': '#9F7AEA',
+					purple: '#0072ff',
+					'purple-light': '#4a9eff',
 					'background': '#F9FAFB',
 					'gray': '#4A5568'
 				},

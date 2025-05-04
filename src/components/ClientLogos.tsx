@@ -25,20 +25,20 @@ const brands = [
   { name: "GlowMode", logo: "/lovable-uploads/2d9241a9-faf6-48eb-82db-bea57133bfda.png" },
 ];
 
-// This is for varying the circle colors
+// Updated circle colors with blue tones
 const circleColors = [
   "border-[#8E9196]", // Neutral Gray
-  "border-[#9b87f5]", // Primary Purple
-  "border-[#7E69AB]", // Secondary Purple
-  "border-[#6E59A5]", // Tertiary Purple
-  "border-[#D6BCFA]", // Light Purple
+  "border-[#0072ff]", // Primary Blue
+  "border-[#4a9eff]", // Light Blue
+  "border-[#005bbf]", // Darker Blue
+  "border-[#c6e3ff]", // Very Light Blue
   "border-[#F2FCE2]", // Soft Green
   "border-[#FEF7CD]", // Soft Yellow
   "border-[#FEC6A1]", // Soft Orange
   "border-[#E5DEFF]", // Soft Purple
   "border-[#FFDEE2]", // Soft Pink
   "border-[#D3E4FD]", // Soft Blue
-  "border-[#8B5CF6]", // Vivid Purple
+  "border-[#0072ff]", // Primary Blue again
   "border-[#0FA0CE]", // Bright Blue
   "border-[#F6F6F7]", // Dark Gray
 ];
