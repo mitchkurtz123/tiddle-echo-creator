@@ -1,10 +1,11 @@
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { 
   Carousel,
   CarouselContent,
   CarouselItem,
+  type CarouselApi
 } from '@/components/ui/carousel';
 
 const slideImages = [
@@ -15,15 +16,34 @@ const slideImages = [
 ];
 
 const Hero: React.FC = () => {
+  const [api, setApi] = useState<CarouselApi>();
   const [currentSlide, setCurrentSlide] = useState(0);
-  
+
+  // Update current slide index when carousel changes
   useEffect(() => {
+    if (!api) return;
+    
+    const handleSelect = () => {
+      setCurrentSlide(api.selectedScrollSnap());
+    };
+    
+    api.on("select", handleSelect);
+    
+    return () => {
+      api.off("select", handleSelect);
+    };
+  }, [api]);
+
+  // Auto-rotate slides every 5 seconds
+  useEffect(() => {
+    if (!api) return;
+    
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slideImages.length);
+      api.scrollNext();
     }, 5000);
     
     return () => clearInterval(interval);
-  }, []);
+  }, [api]);
 
   return (
     <div className="container mx-auto px-4 md:px-8 py-16 md:py-24">
@@ -81,7 +101,7 @@ const Hero: React.FC = () => {
           <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-tiddle-purple/10 rounded-full"></div>
           
           <div className="relative z-10 overflow-hidden rounded-xl shadow-2xl animate-fade-in">
-            <Carousel className="w-full">
+            <Carousel className="w-full" setApi={setApi}>
               <CarouselContent>
                 {slideImages.map((image, index) => (
                   <CarouselItem key={index}>
