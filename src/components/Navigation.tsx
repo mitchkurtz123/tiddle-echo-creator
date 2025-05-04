@@ -14,7 +14,12 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
     <nav className={cn("w-full py-6 px-4 md:px-8", className)}>
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
-          <Link to="/" className="text-2xl font-bold text-gray-800 dark:text-gray-200 mr-10">
+          <Link to="/" className="flex items-center text-2xl font-bold text-gray-800 dark:text-gray-200 mr-10">
+            <img 
+              src="/lovable-uploads/0788fa2d-97dc-4fbc-a56b-dcc61c27bb32.png" 
+              alt="Tiddle Logo" 
+              className="h-8 mr-2 dark:invert" 
+            />
             <span className="text-tiddle-purple">Tiddle</span>.io
           </Link>
           <div className="hidden md:flex space-x-8">
