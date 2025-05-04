@@ -11,8 +11,8 @@ interface NavigationProps {
 
 const Navigation: React.FC<NavigationProps> = ({ className }) => {
   return (
-    <nav className={cn("w-full py-6 px-4 md:px-8", className)}>
-      <div className="container mx-auto flex justify-between items-center">
+    <nav className={cn("w-full py-6", className)}>
+      <div className="container mx-auto px-4 md:px-8 flex justify-between items-center">
         <div className="flex items-center">
           <Link to="/" className="flex items-center text-2xl font-bold text-gray-800 dark:text-gray-200 mr-10">
             <img 
