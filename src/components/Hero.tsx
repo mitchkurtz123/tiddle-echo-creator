@@ -1,8 +1,32 @@
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
+import { 
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious
+} from '@/components/ui/carousel';
+
+const slideImages = [
+  "/lovable-uploads/7d9910c6-cd6c-4699-b901-e70693d0c5e7.png",
+  "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&q=80",
+  "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80",
+  "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80"
+];
 
 const Hero: React.FC = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slideImages.length);
+    }, 5000);
+    
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="container mx-auto px-4 md:px-8 py-16 md:py-24">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
@@ -57,12 +81,25 @@ const Hero: React.FC = () => {
         <div className="relative hidden md:block">
           <div className="absolute -top-4 -left-4 w-24 h-24 bg-tiddle-purple/20 rounded-full"></div>
           <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-tiddle-purple/10 rounded-full"></div>
+          
           <div className="relative z-10 overflow-hidden rounded-xl shadow-2xl animate-fade-in">
-            <img 
-              src="/lovable-uploads/7d9910c6-cd6c-4699-b901-e70693d0c5e7.png" 
-              alt="Social media influencer" 
-              className="w-full h-auto object-cover"
-            />
+            <Carousel className="w-full">
+              <CarouselContent>
+                {slideImages.map((image, index) => (
+                  <CarouselItem key={index}>
+                    <div className="relative overflow-hidden rounded-xl aspect-[4/3]">
+                      <img 
+                        src={image} 
+                        alt={`Social media influencer slide ${index + 1}`} 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="left-2" />
+              <CarouselNext className="right-2" />
+            </Carousel>
           </div>
         </div>
       </div>
