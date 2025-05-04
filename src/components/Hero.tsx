@@ -16,7 +16,8 @@ const slideImages = [
   "/lovable-uploads/458422e2-5e4d-4d15-a8ae-8b750d7f6e30.png",
   "/lovable-uploads/b828db6b-2c51-48bd-b5f9-6a70fad35cd1.png",
   "/lovable-uploads/beea9f3b-5121-4d1b-8501-fafde6f2e025.png",
-  "/lovable-uploads/a0becbb8-ba80-4bff-a517-d7189e3b83dc.png"
+  "/lovable-uploads/a0becbb8-ba80-4bff-a517-d7189e3b83dc.png",
+  "/lovable-uploads/c0e9f30a-f8d6-45e8-ac05-901c200bade7.png"
 ];
 
 const Hero: React.FC = () => {
