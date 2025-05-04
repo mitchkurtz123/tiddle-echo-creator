@@ -70,11 +70,11 @@ const ClientLogos: React.FC = () => {
           duration: 1500,
         }}
       >
-        <CarouselContent className="py-4 -ml-2">
+        <CarouselContent className="-ml-2 py-2">
           {brands.map((brand, index) => (
-            <CarouselItem key={index} className="xs:basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5 xl:basis-1/6 flex justify-center items-center pl-2">
+            <CarouselItem key={index} className="basis-1/3 xs:basis-1/3 sm:basis-1/4 md:basis-1/5 lg:basis-1/6 px-1">
               <div className={`p-0.5 rounded-full ${circleColors[index % circleColors.length]} border-2 flex items-center justify-center bg-white dark:bg-gray-900`}>
-                <div className="rounded-full h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 flex items-center justify-center overflow-hidden bg-white">
+                <div className="rounded-full h-14 w-14 sm:h-16 sm:w-16 md:h-20 md:w-20 flex items-center justify-center overflow-hidden bg-white">
                   <AspectRatio ratio={1/1} className="w-full h-full flex items-center justify-center">
                     <img 
                       src={brand.logo} 
