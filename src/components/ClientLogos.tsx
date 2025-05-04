@@ -6,15 +6,16 @@ import {
   CarouselItem 
 } from "@/components/ui/carousel";
 
+// These will be replaced with your actual logo images once you upload them
 const brands = [
-  { name: "Instagram", logo: "/placeholder.svg" },
-  { name: "TikTok™", logo: "/placeholder.svg" },
-  { name: "YouTube", logo: "/placeholder.svg" },
-  { name: "TwitterX", logo: "/placeholder.svg" },
-  { name: "Meta", logo: "/placeholder.svg" },
-  { name: "Snapchat", logo: "/placeholder.svg" },
-  { name: "LinkedIn", logo: "/placeholder.svg" },
-  { name: "Pinterest", logo: "/placeholder.svg" }
+  { name: "Instagram", logo: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=200&h=100" },
+  { name: "TikTok™", logo: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&h=100" },
+  { name: "YouTube", logo: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=200&h=100" },
+  { name: "TwitterX", logo: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=200&h=100" },
+  { name: "Meta", logo: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=200&h=100" },
+  { name: "Snapchat", logo: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=200&h=100" },
+  { name: "LinkedIn", logo: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&h=100" },
+  { name: "Pinterest", logo: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=200&h=100" }
 ];
 
 const ClientLogos: React.FC = () => {
@@ -46,15 +47,14 @@ const ClientLogos: React.FC = () => {
       >
         <CarouselContent className="py-4">
           {brands.map((brand, index) => (
-            <CarouselItem key={index} className="md:basis-1/4 lg:basis-1/6 flex flex-col items-center transition-transform duration-500">
-              <div className="h-10 w-10 mb-3 bg-gray-100 rounded-md flex items-center justify-center overflow-hidden">
+            <CarouselItem key={index} className="md:basis-1/4 lg:basis-1/6 flex justify-center items-center px-4">
+              <div className="h-16 flex items-center justify-center">
                 <img 
                   src={brand.logo} 
-                  alt={brand.name} 
-                  className="h-8 w-8 object-contain" 
+                  alt={`${brand.name} logo`} 
+                  className="max-h-full max-w-full object-contain" 
                 />
               </div>
-              <div className="font-medium text-xl text-gray-600">{brand.name}</div>
             </CarouselItem>
           ))}
         </CarouselContent>
