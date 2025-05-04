@@ -48,10 +48,10 @@ const Contact: React.FC = () => {
       
       // You'll need to sign up for EmailJS and replace these IDs
       await emailjs.send(
-        'YOUR_SERVICE_ID', 
-        'YOUR_TEMPLATE_ID', 
+        'service_nrygc09', 
+        'template_vyfcni8', 
         templateParams,
-        'YOUR_USER_ID'
+        '8Eivcl_pbE4pnZKMW'
       );
       
       toast.success("Message sent successfully!", {
