@@ -8,6 +8,7 @@ import {
   type CarouselApi
 } from '@/components/ui/carousel';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
+import { Link } from 'react-router-dom';
 
 // Updated slideImages array with your new images
 const slideImages = [
@@ -74,12 +75,12 @@ const Hero: React.FC = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="button-primary">
+            <Link to="/contact" className="button-primary">
               Book a consultation <ArrowRight className="w-4 h-4" />
-            </button>
-            <button className="button-secondary">
+            </Link>
+            <Link to="/roster" className="button-secondary">
               View our talent
-            </button>
+            </Link>
           </div>
           
           <div className="space-y-3">
