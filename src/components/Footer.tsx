@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Separator } from '@/components/ui/separator';
-import { Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
+import { Instagram, TikTok } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -15,17 +15,11 @@ const Footer: React.FC = () => {
             </p>
           </div>
           <div className="flex items-center space-x-4">
-            <a href="#" className="text-tiddle-gray dark:text-gray-300 hover:text-tiddle-purple dark:hover:text-tiddle-purple-light transition-colors">
-              <Facebook size={20} />
-            </a>
-            <a href="#" className="text-tiddle-gray dark:text-gray-300 hover:text-tiddle-purple dark:hover:text-tiddle-purple-light transition-colors">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-tiddle-gray dark:text-gray-300 hover:text-tiddle-purple dark:hover:text-tiddle-purple-light transition-colors">
               <Instagram size={20} />
             </a>
-            <a href="#" className="text-tiddle-gray dark:text-gray-300 hover:text-tiddle-purple dark:hover:text-tiddle-purple-light transition-colors">
-              <Twitter size={20} />
-            </a>
-            <a href="#" className="text-tiddle-gray dark:text-gray-300 hover:text-tiddle-purple dark:hover:text-tiddle-purple-light transition-colors">
-              <Linkedin size={20} />
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="text-tiddle-gray dark:text-gray-300 hover:text-tiddle-purple dark:hover:text-tiddle-purple-light transition-colors">
+              <TikTok size={20} />
             </a>
           </div>
         </div>
