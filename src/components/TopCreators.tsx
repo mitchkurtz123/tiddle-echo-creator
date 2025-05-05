@@ -165,14 +165,17 @@ const TopCreators: React.FC = () => {
         </div>
       </div>
       
-      <style jsx>{`
+      <style>
+        {`
         /* Hide scrollbar for Chrome, Safari and Opera */
         .no-scrollbar::-webkit-scrollbar {
           display: none;
         }
-      `}</style>
+        `}
+      </style>
     </div>
   );
 };
 
 export default TopCreators;
+
