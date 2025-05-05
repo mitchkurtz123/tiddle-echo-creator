@@ -67,7 +67,7 @@ const creators: Creator[] = [
     name: "Sophie",
     username: "@sophiehesri",
     bio: "Beauty and skincare expert specializing in honest product reviews and natural beauty routines.",
-    imageUrl: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    imageUrl: "public/lovable-uploads/09b6b448-d66a-4f2e-b1c4-9ea6b47c8b1b.png",
     instagram: "sophiehesri",
   },
   {
