@@ -43,7 +43,7 @@ const ClientLogos: React.FC = () => {
 
   return (
     <div className="container mx-auto px-4 py-12">
-      <div className="text-gray-400 font-light text-sm mb-6 text-center">TRUSTED BY BRANDS</div>
+      <div className="text-gray-400 font-light text-sm mb-6 text-center">Our Partners</div>
       <Carousel 
         setApi={setApi} 
         className="w-full" 
