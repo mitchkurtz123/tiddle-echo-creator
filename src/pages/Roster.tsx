@@ -138,8 +138,8 @@ const Roster: React.FC = () => {
                       rel="noopener noreferrer"
                       className="flex items-center text-gray-600 dark:text-gray-300 hover:text-tiddle-purple dark:hover:text-tiddle-purple-light"
                     >
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 015.15-1.75V11.5a6.13 6.13 0 003.45 5.5v-4.2a9.6 9.6 0 01-1.38-.13v3.65a6.13 6.13 0 01-9.56-5.06A6.13 6.13 0 0119 11.51V2.05a4.83 4.83 0 003.94 1.45v-3.4a4.85 4.85 0 01-3.35 2.17z"/>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" className="mr-1">
+                        <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3V0Z"/>
                       </svg>
                       <span className="text-sm">TikTok</span>
                     </a>
