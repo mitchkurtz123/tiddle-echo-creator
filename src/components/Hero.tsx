@@ -28,6 +28,7 @@ const Hero: React.FC = () => {
   const [api, setApi] = useState<CarouselApi>();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   // Update current slide index when carousel changes
   useEffect(() => {
@@ -60,16 +61,23 @@ const Hero: React.FC = () => {
     return () => clearInterval(interval);
   }, [api, currentSlide]);
 
-  // Cycle through words with a smoother transition
+  // Cycle through words every 3 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      // Calculate the next word index
-      const nextIndex = (currentWordIndex + 1) % rotatingWords.length;
-      setCurrentWordIndex(nextIndex);
-    }, 4000); // Word rotation interval
+      setIsAnimating(true);
+      
+      setTimeout(() => {
+        setCurrentWordIndex((prevIndex) => (prevIndex + 1) % rotatingWords.length);
+      }, 500); // Wait for the exit animation before changing the word
+      
+      // Reset animation state after the complete animation cycle
+      setTimeout(() => {
+        setIsAnimating(false);
+      }, 1000); // Total animation duration
+    }, 3000);
     
     return () => clearInterval(interval);
-  }, [currentWordIndex]);
+  }, []);
 
   return (
     <div className="container mx-auto px-4 md:px-8 py-16 md:py-24">
@@ -84,9 +92,13 @@ const Hero: React.FC = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               Your Shortcut to <br />
               <span className="h-[1.2em] relative block overflow-hidden">
-                <div className="word-animation-container">
-                  <span className="text-tiddle-purple">{rotatingWords[currentWordIndex]}</span>
-                </div>
+                <span 
+                  className={`text-tiddle-purple inline-block transition-all duration-500 ${
+                    isAnimating ? 'transform -translate-y-full opacity-0' : 'transform translate-y-0 opacity-100'
+                  }`}
+                >
+                  {rotatingWords[currentWordIndex]}
+                </span>
               </span>
             </h1>
             
@@ -147,41 +159,11 @@ const Hero: React.FC = () => {
                 ))}
               </CarouselContent>
             </Carousel>
+            
+            {/* Removed dot navigation */}
           </div>
         </div>
       </div>
-      
-      <style>{`
-        .word-animation-container {
-          position: relative;
-          display: inline-block;
-          overflow: hidden;
-        }
-        
-        .word-animation-container span {
-          display: inline-block;
-          animation: wordFade 4s infinite;
-        }
-        
-        @keyframes wordFade {
-          0%, 20% {
-            opacity: 1;
-            transform: translateY(0);
-          }
-          25%, 30% {
-            opacity: 0;
-            transform: translateY(-20px);
-          }
-          35%, 40% {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          45%, 95% {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      `}</style>
     </div>
   );
 };
