@@ -50,7 +50,7 @@ const Hero: React.FC = () => {
       } else {
         api.scrollNext();
       }
-    }, 5000);
+    }, 4500);
     
     return () => clearInterval(interval);
   }, [api, currentSlide]);
