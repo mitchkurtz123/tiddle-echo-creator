@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { 
@@ -128,19 +129,7 @@ const Hero: React.FC = () => {
               </CarouselContent>
             </Carousel>
             
-            {/* Simple dots navigation */}
-            <div className="flex justify-center space-x-2 mt-4">
-              {slideImages.map((_, index) => (
-                <button
-                  key={index}
-                  className={`w-2.5 h-2.5 rounded-full transition-colors ${
-                    currentSlide === index ? "bg-tiddle-purple" : "bg-gray-300"
-                  }`}
-                  onClick={() => api?.scrollTo(index)}
-                  aria-label={`Go to slide ${index + 1}`}
-                />
-              ))}
-            </div>
+            {/* Removed dot navigation */}
           </div>
         </div>
       </div>
