@@ -110,7 +110,7 @@ const Hero: React.FC = () => {
           
           <div className="flex flex-col sm:flex-row gap-4">
             <Link to="/contact" className="button-primary">
-              Book a consultation <ArrowRight className="w-4 h-4" />
+              Work with us <ArrowRight className="w-4 h-4" />
             </Link>
             <Link to="/roster" className="button-secondary">
               View our talent
