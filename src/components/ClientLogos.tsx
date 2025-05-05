@@ -44,117 +44,66 @@ const circleColors = [
   "border-[#F6F6F7]", // Dark Gray
 ];
 
-// Split brands into two groups for the two rows
-const firstRowBrands = brands.slice(0, Math.ceil(brands.length / 2));
-const secondRowBrands = brands.slice(Math.ceil(brands.length / 2));
-
 const ClientLogos: React.FC = () => {
-  const [api1, setApi1] = useState<any>(null);
-  const [api2, setApi2] = useState<any>(null);
+  const [api, setApi] = useState<any>(null);
   const isMobile = useIsMobile();
 
-  // Set up auto scrolling for first row (left to right)
+  // Set up auto scrolling
   useEffect(() => {
-    if (!api1) return;
+    if (!api) return;
     
     const interval = setInterval(() => {
-      api1.scrollNext({ duration: 1500 });
+      api.scrollNext({ duration: 1500 });
     }, 3000);
     
     return () => clearInterval(interval);
-  }, [api1]);
-
-  // Set up auto scrolling for second row (right to left)
-  useEffect(() => {
-    if (!api2) return;
-    
-    const interval = setInterval(() => {
-      api2.scrollPrev({ duration: 1500 });
-    }, 3000);
-    
-    return () => clearInterval(interval);
-  }, [api2]);
-
-  // Render a brand logo with appropriate styling
-  const renderBrandLogo = (brand: typeof brands[0], index: number) => {
-    if (isMobile) {
-      // Mobile version without borders
-      return (
-        <div className="rounded-full h-14 w-14 flex items-center justify-center overflow-hidden bg-white mx-auto">
-          <AspectRatio ratio={1/1} className="w-full h-full flex items-center justify-center">
-            <img 
-              src={brand.logo} 
-              alt={`${brand.name} logo`} 
-              className="max-h-[70%] max-w-[70%] object-contain" 
-            />
-          </AspectRatio>
-        </div>
-      );
-    } else {
-      // Desktop version with colored borders and perfect circle
-      return (
-        <div className={`p-0.5 rounded-full ${circleColors[index % circleColors.length]} border-2 flex items-center justify-center bg-white`}>
-          <div className="rounded-full h-16 w-16 md:h-20 md:w-20 flex items-center justify-center overflow-hidden bg-white">
-            <AspectRatio ratio={1/1} className="w-full h-full flex items-center justify-center">
-              <img 
-                src={brand.logo} 
-                alt={`${brand.name} logo`} 
-                className="max-h-[70%] max-w-[70%] object-contain" 
-              />
-            </AspectRatio>
-          </div>
-        </div>
-      );
-    }
-  };
+  }, [api]);
 
   return (
-    <div className="container mx-auto px-4 py-6">
+    <div className="container mx-auto px-4 py-12">
       <div className="text-gray-400 font-light text-sm mb-6 text-center">TRUSTED BY BRANDS</div>
-      
-      {/* First row: scrolling left to right */}
-      <div className="mb-4">
-        <Carousel 
-          setApi={setApi1} 
-          className="w-full" 
-          opts={{
-            align: "start",
-            loop: true,
-            dragFree: true,
-            duration: 1500,
-          }}
-        >
-          <CarouselContent className="-ml-2 py-2">
-            {firstRowBrands.map((brand, index) => (
-              <CarouselItem key={index} className="basis-1/3 xs:basis-1/3 sm:basis-1/4 md:basis-1/5 lg:basis-1/6 px-1">
-                {renderBrandLogo(brand, index)}
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-        </Carousel>
-      </div>
-      
-      {/* Second row: scrolling right to left */}
-      <div>
-        <Carousel 
-          setApi={setApi2} 
-          className="w-full" 
-          opts={{
-            align: "start",
-            loop: true,
-            dragFree: true,
-            duration: 1500,
-          }}
-        >
-          <CarouselContent className="-ml-2 py-2">
-            {secondRowBrands.map((brand, index) => (
-              <CarouselItem key={index + firstRowBrands.length} className="basis-1/3 xs:basis-1/3 sm:basis-1/4 md:basis-1/5 lg:basis-1/6 px-1">
-                {renderBrandLogo(brand, index + firstRowBrands.length)}
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-        </Carousel>
-      </div>
+      <Carousel 
+        setApi={setApi} 
+        className="w-full" 
+        opts={{
+          align: "start",
+          loop: true,
+          dragFree: true,
+          duration: 1500,
+        }}
+      >
+        <CarouselContent className="-ml-2 py-2">
+          {brands.map((brand, index) => (
+            <CarouselItem key={index} className="basis-1/3 xs:basis-1/3 sm:basis-1/4 md:basis-1/5 lg:basis-1/6 px-1">
+              {isMobile ? (
+                // Mobile version without borders
+                <div className="rounded-full h-14 w-14 sm:h-16 sm:w-16 md:h-20 md:w-20 flex items-center justify-center overflow-hidden bg-white mx-auto">
+                  <AspectRatio ratio={1/1} className="w-full h-full flex items-center justify-center">
+                    <img 
+                      src={brand.logo} 
+                      alt={`${brand.name} logo`} 
+                      className="max-h-[70%] max-w-[70%] object-contain" 
+                    />
+                  </AspectRatio>
+                </div>
+              ) : (
+                // Desktop version with colored borders
+                <div className={`p-0.5 rounded-full ${circleColors[index % circleColors.length]} border-2 flex items-center justify-center bg-white`}>
+                  <div className="rounded-full h-14 w-14 sm:h-16 sm:w-16 md:h-20 md:w-20 flex items-center justify-center overflow-hidden bg-white">
+                    <AspectRatio ratio={1/1} className="w-full h-full flex items-center justify-center">
+                      <img 
+                        src={brand.logo} 
+                        alt={`${brand.name} logo`} 
+                        className="max-h-[70%] max-w-[70%] object-contain" 
+                      />
+                    </AspectRatio>
+                  </div>
+                </div>
+              )}
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel>
     </div>
   );
 };
