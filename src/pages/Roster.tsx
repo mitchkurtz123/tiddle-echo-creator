@@ -32,7 +32,7 @@ const creators: Creator[] = [
     name: "preslee",
     username: "@iampresleefaith",
     bio: "Fitness influencer specializing in home workouts and nutrition advice. Creating accessible fitness content for all levels.",
-    imageUrl: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    imageUrl: "public/lovable-uploads/14f2705c-f83d-4854-8e1b-c88c92765ac3.png",
     instagram: "iampresleefaith",
   },
   {
