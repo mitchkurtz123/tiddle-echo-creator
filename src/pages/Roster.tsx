@@ -25,7 +25,7 @@ const creators: Creator[] = [
     name: "Gianna",
     username: "@Giannamjoyce",
     bio: "Travel vlogger sharing adventures from around the world. Expert in budget travel tips and local experiences.",
-    imageUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=776&q=80",
+    imageUrl: "public/lovable-uploads/0faf56e6-6f94-4689-ba48-66db55572150.png",
     instagram: "Giannamjoyce",
   },
   {
