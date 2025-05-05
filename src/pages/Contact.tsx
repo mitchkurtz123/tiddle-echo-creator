@@ -69,14 +69,14 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-tiddle-background dark:bg-gray-900">
-      <div className="max-w-7xl mx-auto bg-white dark:bg-gray-800 rounded-3xl shadow-lg my-4 overflow-hidden">
+    <div className="min-h-screen bg-tiddle-background">
+      <div className="w-full bg-white shadow-lg my-4 overflow-hidden">
         <Navigation />
         
-        <div className="container mx-auto py-12 px-4 md:px-6">
+        <div className="container mx-auto py-12 px-4 md:px-6 max-w-none">
           <div className="max-w-2xl mx-auto">
-            <h1 className="text-3xl font-bold text-center mb-8 text-gray-800 dark:text-gray-100">Contact Us</h1>
-            <p className="text-tiddle-gray dark:text-gray-300 text-center mb-10">
+            <h1 className="text-3xl font-bold text-center mb-8 text-gray-800">Contact Us</h1>
+            <p className="text-tiddle-gray text-center mb-10">
               Have a question or feedback? We'd love to hear from you.
             </p>
             
@@ -87,12 +87,12 @@ const Contact: React.FC = () => {
                   name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-gray-700 dark:text-gray-200">Name</FormLabel>
+                      <FormLabel className="text-gray-700">Name</FormLabel>
                       <FormControl>
                         <Input 
                           placeholder="Enter your name" 
                           {...field}
-                          className="border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100" 
+                          className="border-gray-300" 
                         />
                       </FormControl>
                       <FormMessage />
@@ -105,13 +105,13 @@ const Contact: React.FC = () => {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-gray-700 dark:text-gray-200">Email</FormLabel>
+                      <FormLabel className="text-gray-700">Email</FormLabel>
                       <FormControl>
                         <Input 
                           type="email"
                           placeholder="your.email@example.com" 
                           {...field} 
-                          className="border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100"
+                          className="border-gray-300"
                         />
                       </FormControl>
                       <FormMessage />
@@ -124,12 +124,12 @@ const Contact: React.FC = () => {
                   name="username"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-gray-700 dark:text-gray-200">Username</FormLabel>
+                      <FormLabel className="text-gray-700">Username</FormLabel>
                       <FormControl>
                         <Input 
                           placeholder="Enter your username" 
                           {...field} 
-                          className="border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100"
+                          className="border-gray-300"
                         />
                       </FormControl>
                       <FormMessage />
@@ -142,12 +142,12 @@ const Contact: React.FC = () => {
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-gray-700 dark:text-gray-200">Message</FormLabel>
+                      <FormLabel className="text-gray-700">Message</FormLabel>
                       <FormControl>
                         <Textarea 
                           placeholder="Type your message here" 
                           {...field} 
-                          className="min-h-[150px] border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100"
+                          className="min-h-[150px] border-gray-300"
                         />
                       </FormControl>
                       <FormMessage />
