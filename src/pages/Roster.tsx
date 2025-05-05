@@ -74,7 +74,7 @@ const creators: Creator[] = [
     name: "neeveaha",
     username: "@neevaeha",
     bio: "DIY home décor and craft specialist sharing budget-friendly home transformation ideas.",
-    imageUrl: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    imageUrl: "public/lovable-uploads/56f7b558-ef0b-435e-91fc-f7a5bd506655.png",
     instagram: "neevaeha",
   },
   {
