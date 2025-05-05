@@ -88,7 +88,7 @@ const creators: Creator[] = [
     name: "mysterious",
     username: "@mysterious.girl7708",
     bio: "Creative photographer showcasing unique perspectives on everyday subjects and travel destinations.",
-    imageUrl: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    imageUrl: "public/lovable-uploads/b0637d4f-530b-4e49-b718-1f51789cdf3e.png",
     instagram: "mysterious.girl7708",
   },
   {
