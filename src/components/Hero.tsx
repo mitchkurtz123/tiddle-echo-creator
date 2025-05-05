@@ -63,7 +63,7 @@ const Hero: React.FC = () => {
         <div className="space-y-8 animate-fade-in">
           <div className="inline-flex items-center bg-gray-100 rounded-full px-4 py-1.5 text-sm text-gray-700">
             <span className="bg-tiddle-purple text-white px-2 py-0.5 rounded-full text-xs font-medium mr-2">NEW</span>
-            <span>The team behind the Glow House</span>
+            <span>From the team behind the Glow House</span>
           </div>
           
           <div className="space-y-6">
