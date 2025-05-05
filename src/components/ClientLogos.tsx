@@ -26,24 +26,6 @@ const brands = [
   { name: "GlowMode", logo: "/lovable-uploads/2d9241a9-faf6-48eb-82db-bea57133bfda.png" },
 ];
 
-// Updated circle colors with blue tones
-const circleColors = [
-  "border-[#8E9196]", // Neutral Gray
-  "border-[#0072ff]", // Primary Blue
-  "border-[#4a9eff]", // Light Blue
-  "border-[#005bbf]", // Darker Blue
-  "border-[#c6e3ff]", // Very Light Blue
-  "border-[#F2FCE2]", // Soft Green
-  "border-[#FEF7CD]", // Soft Yellow
-  "border-[#FEC6A1]", // Soft Orange
-  "border-[#E5DEFF]", // Soft Purple
-  "border-[#FFDEE2]", // Soft Pink
-  "border-[#D3E4FD]", // Soft Blue
-  "border-[#0072ff]", // Primary Blue again
-  "border-[#0FA0CE]", // Bright Blue
-  "border-[#F6F6F7]", // Dark Gray
-];
-
 const ClientLogos: React.FC = () => {
   const [api, setApi] = useState<any>(null);
   const isMobile = useIsMobile();
@@ -75,31 +57,16 @@ const ClientLogos: React.FC = () => {
         <CarouselContent className="-ml-2 py-2">
           {brands.map((brand, index) => (
             <CarouselItem key={index} className="basis-1/3 xs:basis-1/3 sm:basis-1/4 md:basis-1/5 lg:basis-1/6 px-1">
-              {isMobile ? (
-                // Mobile version without borders
-                <div className="rounded-full h-14 w-14 sm:h-16 sm:w-16 md:h-20 md:w-20 flex items-center justify-center overflow-hidden bg-white mx-auto">
-                  <AspectRatio ratio={1/1} className="w-full h-full flex items-center justify-center">
-                    <img 
-                      src={brand.logo} 
-                      alt={`${brand.name} logo`} 
-                      className="max-h-[70%] max-w-[70%] object-contain" 
-                    />
-                  </AspectRatio>
-                </div>
-              ) : (
-                // Desktop version with colored borders
-                <div className={`p-0.5 rounded-full ${circleColors[index % circleColors.length]} border-2 flex items-center justify-center bg-white`}>
-                  <div className="rounded-full h-14 w-14 sm:h-16 sm:w-16 md:h-20 md:w-20 flex items-center justify-center overflow-hidden bg-white">
-                    <AspectRatio ratio={1/1} className="w-full h-full flex items-center justify-center">
-                      <img 
-                        src={brand.logo} 
-                        alt={`${brand.name} logo`} 
-                        className="max-h-[70%] max-w-[70%] object-contain" 
-                      />
-                    </AspectRatio>
-                  </div>
-                </div>
-              )}
+              {/* Simplified logo display with increased size, no border */}
+              <div className="rounded-full h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 flex items-center justify-center overflow-hidden bg-white mx-auto">
+                <AspectRatio ratio={1/1} className="w-full h-full flex items-center justify-center">
+                  <img 
+                    src={brand.logo} 
+                    alt={`${brand.name} logo`} 
+                    className="max-h-[80%] max-w-[80%] object-contain" 
+                  />
+                </AspectRatio>
+              </div>
             </CarouselItem>
           ))}
         </CarouselContent>
