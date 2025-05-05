@@ -28,8 +28,6 @@ const Hero: React.FC = () => {
   const [api, setApi] = useState<CarouselApi>();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const [nextWordIndex, setNextWordIndex] = useState(1);
-  const [isAnimating, setIsAnimating] = useState(false);
 
   // Update current slide index when carousel changes
   useEffect(() => {
@@ -62,23 +60,13 @@ const Hero: React.FC = () => {
     return () => clearInterval(interval);
   }, [api, currentSlide]);
 
-  // Cycle through words with a slower transition and 20% longer delay
+  // Cycle through words with a smoother transition
   useEffect(() => {
-    // Increasing the interval from 3000ms to 4000ms for more elegance
     const interval = setInterval(() => {
-      setIsAnimating(true);
-      
       // Calculate the next word index
-      const next = (currentWordIndex + 1) % rotatingWords.length;
-      setNextWordIndex(next);
-      
-      // Wait for exit animation to complete (extended for more elegance)
-      setTimeout(() => {
-        setCurrentWordIndex(next);
-        setIsAnimating(false);
-      }, 1200); // Increased from 800ms to 1200ms for a more graceful transition
-      
-    }, 4000); // Increased from 3600ms to 4000ms for a more elegant timing
+      const nextIndex = (currentWordIndex + 1) % rotatingWords.length;
+      setCurrentWordIndex(nextIndex);
+    }, 4000); // Word rotation interval
     
     return () => clearInterval(interval);
   }, [currentWordIndex]);
@@ -96,24 +84,9 @@ const Hero: React.FC = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               Your Shortcut to <br />
               <span className="h-[1.2em] relative block overflow-hidden">
-                {/* Current word that animates out */}
-                <span 
-                  className={`text-tiddle-purple absolute inset-0 transition-all duration-1200 ease-in-out ${
-                    isAnimating ? 'transform -translate-y-full opacity-0' : 'transform translate-y-0 opacity-100'
-                  }`}
-                >
-                  {rotatingWords[currentWordIndex]}
-                </span>
-                
-                {/* Next word that animates in from below */}
-                {isAnimating && (
-                  <span 
-                    className="text-tiddle-purple absolute inset-0 transition-all duration-1200 ease-in-out transform translate-y-full opacity-100"
-                    style={{ animation: "slideUpElegant 1200ms cubic-bezier(0.42, 0, 0.58, 1) forwards" }}
-                  >
-                    {rotatingWords[nextWordIndex]}
-                  </span>
-                )}
+                <div className="word-animation-container">
+                  <span className="text-tiddle-purple">{rotatingWords[currentWordIndex]}</span>
+                </div>
               </span>
             </h1>
             
@@ -174,34 +147,39 @@ const Hero: React.FC = () => {
                 ))}
               </CarouselContent>
             </Carousel>
-            
-            {/* Removed dot navigation */}
           </div>
         </div>
       </div>
       
       <style>{`
-        @keyframes slideUpElegant {
-          0% {
-            transform: translateY(100%);
-            opacity: 0;
-          }
-          20% {
-            transform: translateY(80%);
-            opacity: 0.2;
-          }
-          60% {
-            transform: translateY(40%);
-            opacity: 0.6;
-          }
-          100% {
-            transform: translateY(0);
-            opacity: 1;
-          }
+        .word-animation-container {
+          position: relative;
+          display: inline-block;
+          overflow: hidden;
         }
         
-        .duration-1200 {
-          transition-duration: 1200ms;
+        .word-animation-container span {
+          display: inline-block;
+          animation: wordFade 4s infinite;
+        }
+        
+        @keyframes wordFade {
+          0%, 20% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+          25%, 30% {
+            opacity: 0;
+            transform: translateY(-20px);
+          }
+          35%, 40% {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          45%, 95% {
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
       `}</style>
     </div>
