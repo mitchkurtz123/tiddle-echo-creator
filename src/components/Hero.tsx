@@ -16,7 +16,10 @@ const slideImages = [
   "/lovable-uploads/b828db6b-2c51-48bd-b5f9-6a70fad35cd1.png",
   "/lovable-uploads/beea9f3b-5121-4d1b-8501-fafde6f2e025.png",
   "/lovable-uploads/a0becbb8-ba80-4bff-a517-d7189e3b83dc.png",
-  "/lovable-uploads/c0e9f30a-f8d6-45e8-ac05-901c200bade7.png"
+  "/lovable-uploads/c0e9f30a-f8d6-45e8-ac05-901c200bade7.png",
+  "/lovable-uploads/4ddbf659-867c-4611-9022-ec3a61291441.png",
+  "/lovable-uploads/be3884b5-2cef-4f0c-8857-b999bbe73d63.png",
+  "/lovable-uploads/bdd5ebbb-b9fc-41b3-bfc4-cdc45642a58b.png"
 ];
 
 const Hero: React.FC = () => {
