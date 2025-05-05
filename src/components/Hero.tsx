@@ -61,20 +61,22 @@ const Hero: React.FC = () => {
     return () => clearInterval(interval);
   }, [api, currentSlide]);
 
-  // Cycle through words every 3 seconds
+  // Cycle through words with a slower transition and 20% longer delay
   useEffect(() => {
+    // Increasing the interval from 3000ms to 3600ms (20% increase)
     const interval = setInterval(() => {
       setIsAnimating(true);
       
+      // Wait for exit animation to complete (extended)
       setTimeout(() => {
         setCurrentWordIndex((prevIndex) => (prevIndex + 1) % rotatingWords.length);
-      }, 500); // Wait for the exit animation before changing the word
+      }, 800); // Increased from 500ms to 800ms
       
       // Reset animation state after the complete animation cycle
       setTimeout(() => {
         setIsAnimating(false);
-      }, 1000); // Total animation duration
-    }, 3000);
+      }, 1600); // Increased from 1000ms to 1600ms for total animation duration
+    }, 3600); // Increased from 3000ms to 3600ms (20% increase)
     
     return () => clearInterval(interval);
   }, []);
@@ -93,7 +95,7 @@ const Hero: React.FC = () => {
               Your Shortcut to <br />
               <span className="h-[1.2em] relative block overflow-hidden">
                 <span 
-                  className={`text-tiddle-purple inline-block transition-all duration-500 ${
+                  className={`text-tiddle-purple inline-block transition-all duration-800 ease-in-out ${
                     isAnimating ? 'transform -translate-y-full opacity-0' : 'transform translate-y-0 opacity-100'
                   }`}
                 >
