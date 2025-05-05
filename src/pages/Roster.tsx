@@ -53,7 +53,7 @@ const creators: Creator[] = [
     name: "Cesar",
     username: "@notces4r",
     bio: "Food creator sharing quick recipes and restaurant reviews. Passionate about exploring diverse cuisines.",
-    imageUrl: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    imageUrl: "public/lovable-uploads/ce65a52b-8418-49ca-a5d8-068d28ebbf7b.png",
     instagram: "notces4r",
   },
   {
