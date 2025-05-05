@@ -104,7 +104,7 @@ const Hero: React.FC = () => {
             </h1>
             
             <p className="text-gray-600 text-lg md:text-xl max-w-md">
-              Strategic talent management built for those who never back down from creating engaging content.
+              LA based strategic talent management built for growing creators.
             </p>
           </div>
           
