@@ -10,8 +10,9 @@ import {
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Link } from 'react-router-dom';
 
-// Updated slideImages array with your new images
+// Updated slideImages array with your new image
 const slideImages = [
+  "/lovable-uploads/af5c9f59-ced8-4346-8acd-b543d2d32080.png", // Added the new image as the first in the carousel
   "/lovable-uploads/458422e2-5e4d-4d15-a8ae-8b750d7f6e30.png",
   "/lovable-uploads/b828db6b-2c51-48bd-b5f9-6a70fad35cd1.png",
   "/lovable-uploads/a0becbb8-ba80-4bff-a517-d7189e3b83dc.png",
