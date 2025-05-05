@@ -1,7 +1,9 @@
+
 import React from 'react';
 import { Separator } from '@/components/ui/separator';
 import { Instagram } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
 const Footer: React.FC = () => {
   return <footer className="py-12 bg-white dark:bg-gray-800">
       <div className="container mx-auto px-4">
@@ -30,12 +32,12 @@ const Footer: React.FC = () => {
             &copy; {new Date().getFullYear()} Tiddle. All rights reserved.
           </p>
           <div className="flex space-x-6">
-            <a href="#" className="text-tiddle-gray dark:text-gray-400 hover:text-tiddle-purple dark:hover:text-tiddle-purple-light text-sm transition-colors">
+            <Link to="/privacy-policy" className="text-tiddle-gray dark:text-gray-400 hover:text-tiddle-purple dark:hover:text-tiddle-purple-light text-sm transition-colors">
               Privacy Policy
-            </a>
-            <a href="#" className="text-tiddle-gray dark:text-gray-400 hover:text-tiddle-purple dark:hover:text-tiddle-purple-light text-sm transition-colors">
+            </Link>
+            <Link to="/terms-of-service" className="text-tiddle-gray dark:text-gray-400 hover:text-tiddle-purple dark:hover:text-tiddle-purple-light text-sm transition-colors">
               Terms of Service
-            </a>
+            </Link>
             <Link to="/contact" className="text-tiddle-gray dark:text-gray-400 hover:text-tiddle-purple dark:hover:text-tiddle-purple-light text-sm transition-colors">
               Contact Us
             </Link>
@@ -44,4 +46,5 @@ const Footer: React.FC = () => {
       </div>
     </footer>;
 };
+
 export default Footer;
