@@ -13,68 +13,81 @@ type Creator = {
   name: string;
   username: string;
   image: string;
+  instagram: string;
 };
 
 const creators: Creator[] = [
   {
     name: "GlowHouse",
     username: "@Realglowhouse",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    image: "public/lovable-uploads/4cfb4b63-f92a-45dc-8796-844f0d631af8.png",
+    instagram: "Realglowhouse",
   },
   {
     name: "Gianna",
     username: "@Giannamjoyce",
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=776&q=80",
+    image: "public/lovable-uploads/0faf56e6-6f94-4689-ba48-66db55572150.png",
+    instagram: "Giannamjoyce",
   },
   {
     name: "preslee",
     username: "@iampresleefaith",
-    image: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    image: "public/lovable-uploads/14f2705c-f83d-4854-8e1b-c88c92765ac3.png",
+    instagram: "iampresleefaith",
   },
   {
     name: "Samara Ispink",
     username: "@Samaraispinkk",
-    image: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    image: "public/lovable-uploads/d26f0d18-6176-46d8-a4f4-969d49f523e3.png",
+    instagram: "Samaraispinkk",
   },
   {
     name: "paul",
     username: "@paultooreall",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    image: "public/lovable-uploads/c4835c77-bd82-4bee-af86-e8a12a7b89a7.png",
+    instagram: "paultooreall",
   },
   {
     name: "Cesar",
     username: "@notces4r",
-    image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    image: "public/lovable-uploads/ce65a52b-8418-49ca-a5d8-068d28ebbf7b.png",
+    instagram: "notces4r",
   },
   {
     name: "Zuza",
     username: "@zuzas.healing0",
-    image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    image: "public/lovable-uploads/162011a2-666a-4973-936a-87045a9222b3.png",
+    instagram: "zuzas.healing0",
   },
   {
     name: "Sophie",
     username: "@sophiehesri",
-    image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    image: "public/lovable-uploads/09b6b448-d66a-4f2e-b1c4-9ea6b47c8b1b.png",
+    instagram: "sophiehesri",
   },
   {
     name: "neeveaha",
     username: "@neevaeha",
-    image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    image: "public/lovable-uploads/56f7b558-ef0b-435e-91fc-f7a5bd506655.png",
+    instagram: "neevaeha",
   },
   {
     name: "ayiah",
     username: "@ayiahsoufi_",
-    image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    image: "public/lovable-uploads/4c286d5d-cc5f-45ea-8df3-ad710f25d301.png",
+    instagram: "ayiahsoufi_",
   },
   {
     name: "mysterious",
     username: "@mysterious.girl7708",
-    image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    image: "public/lovable-uploads/b0637d4f-530b-4e49-b718-1f51789cdf3e.png",
+    instagram: "mysterious.girl7708",
   },
   {
     name: "Aggayucita",
     username: "@Aggayucita",
-    image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    image: "public/lovable-uploads/1d153e94-623d-4d53-8f88-fac36e8b4ac6.png",
+    instagram: "Aggayucita",
   },
 ];
 
@@ -146,7 +159,7 @@ const TopCreators: React.FC = () => {
                       />
                     </div>
                     <a 
-                      href={`https://instagram.com/${creator.username.substring(1)}`}
+                      href={`https://instagram.com/${creator.instagram}`}
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-tiddle-purple dark:text-tiddle-purple-light font-medium text-center hover:underline font-sans truncate w-full"
@@ -178,4 +191,3 @@ const TopCreators: React.FC = () => {
 };
 
 export default TopCreators;
-
