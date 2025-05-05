@@ -95,7 +95,7 @@ const creators: Creator[] = [
     name: "Aggayucita",
     username: "@Aggayucita",
     bio: "Lifestyle and fashion influencer known for minimalist aesthetics and sustainable fashion choices.",
-    imageUrl: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    imageUrl: "public/lovable-uploads/1d153e94-623d-4d53-8f88-fac36e8b4ac6.png",
     instagram: "Aggayucita",
   },
 ];
