@@ -18,7 +18,7 @@ const creators: Creator[] = [
     name: "GlowHouse",
     username: "@Realglowhouse",
     bio: "Beauty & Lifestyle content creator based in NYC. Specializing in skincare reviews and daily outfit inspiration.",
-    imageUrl: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    imageUrl: "public/lovable-uploads/4cfb4b63-f92a-45dc-8796-844f0d631af8.png",
     instagram: "Realglowhouse",
   },
   {
