@@ -21,9 +21,14 @@ const slideImages = [
   "/lovable-uploads/ea4eb3f2-b72e-4f29-b3b2-e40a941fcfac.png"
 ];
 
+// Words that will rotate in the hero headline
+const rotatingWords = ["Influence", "Management", "Monetization", "Partnerships"];
+
 const Hero: React.FC = () => {
   const [api, setApi] = useState<CarouselApi>();
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [isChanging, setIsChanging] = useState(false);
 
   // Update current slide index when carousel changes
   useEffect(() => {
@@ -56,6 +61,25 @@ const Hero: React.FC = () => {
     return () => clearInterval(interval);
   }, [api, currentSlide]);
 
+  // Cycle through words every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsChanging(true);
+      
+      // Wait for fade-out animation to complete
+      setTimeout(() => {
+        setCurrentWordIndex((prevIndex) => (prevIndex + 1) % rotatingWords.length);
+        
+        // Trigger fade-in animation
+        setTimeout(() => {
+          setIsChanging(false);
+        }, 50);
+      }, 300); // Match this to your CSS transition time
+    }, 3000);
+    
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="container mx-auto px-4 md:px-8 py-16 md:py-24">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
@@ -68,7 +92,13 @@ const Hero: React.FC = () => {
           <div className="space-y-6">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               Your Shortcut to <br />
-              <span className="text-tiddle-purple">Influence</span>
+              <span className="relative inline-block h-[1.2em] overflow-hidden">
+                <span 
+                  className={`text-tiddle-purple absolute transition-all duration-300 ${isChanging ? 'opacity-0 transform -translate-y-8' : 'opacity-100 transform translate-y-0'}`}
+                >
+                  {rotatingWords[currentWordIndex]}
+                </span>
+              </span>
             </h1>
             
             <p className="text-gray-600 text-lg md:text-xl max-w-md">
