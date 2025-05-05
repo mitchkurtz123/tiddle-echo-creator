@@ -2,6 +2,7 @@
 import React from 'react';
 import { Separator } from '@/components/ui/separator';
 import { Instagram } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
@@ -43,9 +44,9 @@ const Footer: React.FC = () => {
             <a href="#" className="text-tiddle-gray dark:text-gray-400 hover:text-tiddle-purple dark:hover:text-tiddle-purple-light text-sm transition-colors">
               Terms of Service
             </a>
-            <a href="#" className="text-tiddle-gray dark:text-gray-400 hover:text-tiddle-purple dark:hover:text-tiddle-purple-light text-sm transition-colors">
+            <Link to="/contact" className="text-tiddle-gray dark:text-gray-400 hover:text-tiddle-purple dark:hover:text-tiddle-purple-light text-sm transition-colors">
               Contact Us
-            </a>
+            </Link>
           </div>
         </div>
       </div>
