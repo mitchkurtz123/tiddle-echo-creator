@@ -77,7 +77,7 @@ const ClientLogos: React.FC = () => {
             <CarouselItem key={index} className="basis-1/3 xs:basis-1/3 sm:basis-1/4 md:basis-1/5 lg:basis-1/6 px-1">
               {isMobile ? (
                 // Mobile version without borders
-                <div className="rounded-full h-14 w-14 sm:h-16 sm:w-16 md:h-20 md:w-20 flex items-center justify-center overflow-hidden bg-white dark:bg-gray-900 mx-auto">
+                <div className="rounded-full h-14 w-14 sm:h-16 sm:w-16 md:h-20 md:w-20 flex items-center justify-center overflow-hidden bg-white mx-auto">
                   <AspectRatio ratio={1/1} className="w-full h-full flex items-center justify-center">
                     <img 
                       src={brand.logo} 
