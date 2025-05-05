@@ -88,7 +88,7 @@ const ClientLogos: React.FC = () => {
                 </div>
               ) : (
                 // Desktop version with colored borders
-                <div className={`p-0.5 rounded-full ${circleColors[index % circleColors.length]} border-2 flex items-center justify-center bg-white dark:bg-gray-900`}>
+                <div className={`p-0.5 rounded-full ${circleColors[index % circleColors.length]} border-2 flex items-center justify-center bg-white`}>
                   <div className="rounded-full h-14 w-14 sm:h-16 sm:w-16 md:h-20 md:w-20 flex items-center justify-center overflow-hidden bg-white">
                     <AspectRatio ratio={1/1} className="w-full h-full flex items-center justify-center">
                       <img 
