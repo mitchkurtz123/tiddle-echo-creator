@@ -13,7 +13,7 @@ type Creator = {
   name: string;
   username: string;
   image: string;
-  instagram: string;
+  tiktok: string;
 };
 
 const creators: Creator[] = [
@@ -21,73 +21,73 @@ const creators: Creator[] = [
     name: "GlowHouse",
     username: "@Realglowhouse",
     image: "public/lovable-uploads/4cfb4b63-f92a-45dc-8796-844f0d631af8.png",
-    instagram: "Realglowhouse",
+    tiktok: "Realglowhouse",
   },
   {
     name: "Gianna",
     username: "@Giannamjoyce",
     image: "public/lovable-uploads/0faf56e6-6f94-4689-ba48-66db55572150.png",
-    instagram: "Giannamjoyce",
+    tiktok: "Giannamjoyce",
   },
   {
     name: "preslee",
     username: "@iampresleefaith",
     image: "public/lovable-uploads/14f2705c-f83d-4854-8e1b-c88c92765ac3.png",
-    instagram: "iampresleefaith",
+    tiktok: "iampresleefaith",
   },
   {
     name: "Samara Ispink",
     username: "@Samaraispinkk",
     image: "public/lovable-uploads/d26f0d18-6176-46d8-a4f4-969d49f523e3.png",
-    instagram: "Samaraispinkk",
+    tiktok: "Samaraispinkk",
   },
   {
     name: "paul",
     username: "@paultooreall",
     image: "public/lovable-uploads/c4835c77-bd82-4bee-af86-e8a12a7b89a7.png",
-    instagram: "paultooreall",
+    tiktok: "paultooreall",
   },
   {
     name: "Cesar",
     username: "@notces4r",
     image: "public/lovable-uploads/ce65a52b-8418-49ca-a5d8-068d28ebbf7b.png",
-    instagram: "notces4r",
+    tiktok: "notces4r",
   },
   {
     name: "Zuza",
     username: "@zuzas.healing0",
     image: "public/lovable-uploads/162011a2-666a-4973-936a-87045a9222b3.png",
-    instagram: "zuzas.healing0",
+    tiktok: "zuzas.healing0",
   },
   {
     name: "Sophie",
     username: "@sophiehesri",
     image: "public/lovable-uploads/09b6b448-d66a-4f2e-b1c4-9ea6b47c8b1b.png",
-    instagram: "sophiehesri",
+    tiktok: "sophiehesri",
   },
   {
     name: "neeveaha",
     username: "@neevaeha",
     image: "public/lovable-uploads/56f7b558-ef0b-435e-91fc-f7a5bd506655.png",
-    instagram: "neevaeha",
+    tiktok: "neevaeha",
   },
   {
     name: "ayiah",
     username: "@ayiahsoufi_",
     image: "public/lovable-uploads/4c286d5d-cc5f-45ea-8df3-ad710f25d301.png",
-    instagram: "ayiahsoufi_",
+    tiktok: "ayiahsoufi_",
   },
   {
     name: "mysterious",
     username: "@mysterious.girl7708",
     image: "public/lovable-uploads/b0637d4f-530b-4e49-b718-1f51789cdf3e.png",
-    instagram: "mysterious.girl7708",
+    tiktok: "mysterious.girl7708",
   },
   {
     name: "Aggayucita",
     username: "@Aggayucita",
     image: "public/lovable-uploads/1d153e94-623d-4d53-8f88-fac36e8b4ac6.png",
-    instagram: "Aggayucita",
+    tiktok: "Aggayucita",
   },
 ];
 
@@ -159,7 +159,7 @@ const TopCreators: React.FC = () => {
                       />
                     </div>
                     <a 
-                      href={`https://instagram.com/${creator.instagram}`}
+                      href={`https://tiktok.com/@${creator.tiktok}`}
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-tiddle-purple dark:text-tiddle-purple-light font-medium text-center hover:underline font-sans truncate w-full"

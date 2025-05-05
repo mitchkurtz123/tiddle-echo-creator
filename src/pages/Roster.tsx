@@ -2,7 +2,7 @@
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { Instagram, Mail } from 'lucide-react';
+import { Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 type Creator = {
@@ -10,7 +10,7 @@ type Creator = {
   username: string;
   bio: string;
   imageUrl: string;
-  instagram: string;
+  tiktok: string;
 };
 
 const creators: Creator[] = [
@@ -19,84 +19,84 @@ const creators: Creator[] = [
     username: "@Realglowhouse",
     bio: "Beauty & Lifestyle content creator based in NYC. Specializing in skincare reviews and daily outfit inspiration.",
     imageUrl: "public/lovable-uploads/4cfb4b63-f92a-45dc-8796-844f0d631af8.png",
-    instagram: "Realglowhouse",
+    tiktok: "Realglowhouse",
   },
   {
     name: "Gianna",
     username: "@Giannamjoyce",
     bio: "Travel vlogger sharing adventures from around the world. Expert in budget travel tips and local experiences.",
     imageUrl: "public/lovable-uploads/0faf56e6-6f94-4689-ba48-66db55572150.png",
-    instagram: "Giannamjoyce",
+    tiktok: "Giannamjoyce",
   },
   {
     name: "preslee",
     username: "@iampresleefaith",
     bio: "Fitness influencer specializing in home workouts and nutrition advice. Creating accessible fitness content for all levels.",
     imageUrl: "public/lovable-uploads/14f2705c-f83d-4854-8e1b-c88c92765ac3.png",
-    instagram: "iampresleefaith",
+    tiktok: "iampresleefaith",
   },
   {
     name: "Samara Ispink",
     username: "@Samaraispinkk",
     bio: "Fashion enthusiast and sustainable clothing advocate. Showcasing ethical fashion brands and styling tips.",
     imageUrl: "public/lovable-uploads/d26f0d18-6176-46d8-a4f4-969d49f523e3.png",
-    instagram: "Samaraispinkk",
+    tiktok: "Samaraispinkk",
   },
   {
     name: "paul",
     username: "@paultooreall",
     bio: "Tech reviewer and digital lifestyle content creator. Sharing the latest gadget reviews and productivity tips.",
     imageUrl: "public/lovable-uploads/c4835c77-bd82-4bee-af86-e8a12a7b89a7.png",
-    instagram: "paultooreall",
+    tiktok: "paultooreall",
   },
   {
     name: "Cesar",
     username: "@notces4r",
     bio: "Food creator sharing quick recipes and restaurant reviews. Passionate about exploring diverse cuisines.",
     imageUrl: "public/lovable-uploads/ce65a52b-8418-49ca-a5d8-068d28ebbf7b.png",
-    instagram: "notces4r",
+    tiktok: "notces4r",
   },
   {
     name: "Zuza",
     username: "@zuzas.healing0",
     bio: "Wellness and mindfulness influencer focusing on mental health awareness and holistic healing practices.",
     imageUrl: "public/lovable-uploads/162011a2-666a-4973-936a-87045a9222b3.png",
-    instagram: "zuzas.healing0",
+    tiktok: "zuzas.healing0",
   },
   {
     name: "Sophie",
     username: "@sophiehesri",
     bio: "Beauty and skincare expert specializing in honest product reviews and natural beauty routines.",
     imageUrl: "public/lovable-uploads/09b6b448-d66a-4f2e-b1c4-9ea6b47c8b1b.png",
-    instagram: "sophiehesri",
+    tiktok: "sophiehesri",
   },
   {
     name: "neeveaha",
     username: "@neevaeha",
     bio: "DIY home décor and craft specialist sharing budget-friendly home transformation ideas.",
     imageUrl: "public/lovable-uploads/56f7b558-ef0b-435e-91fc-f7a5bd506655.png",
-    instagram: "neevaeha",
+    tiktok: "neevaeha",
   },
   {
     name: "ayiah",
     username: "@ayiahsoufi_",
     bio: "Fitness and nutrition coach focused on sustainable lifestyle changes and body positivity.",
     imageUrl: "public/lovable-uploads/4c286d5d-cc5f-45ea-8df3-ad710f25d301.png",
-    instagram: "ayiahsoufi_",
+    tiktok: "ayiahsoufi_",
   },
   {
     name: "mysterious",
     username: "@mysterious.girl7708",
     bio: "Creative photographer showcasing unique perspectives on everyday subjects and travel destinations.",
     imageUrl: "public/lovable-uploads/b0637d4f-530b-4e49-b718-1f51789cdf3e.png",
-    instagram: "mysterious.girl7708",
+    tiktok: "mysterious.girl7708",
   },
   {
     name: "Aggayucita",
     username: "@Aggayucita",
     bio: "Lifestyle and fashion influencer known for minimalist aesthetics and sustainable fashion choices.",
     imageUrl: "public/lovable-uploads/1d153e94-623d-4d53-8f88-fac36e8b4ac6.png",
-    instagram: "Aggayucita",
+    tiktok: "Aggayucita",
   },
 ];
 
@@ -133,13 +133,15 @@ const Roster: React.FC = () => {
                   <p className="text-gray-600 dark:text-gray-300 mb-4">{creator.bio}</p>
                   <div className="flex items-center space-x-4">
                     <a 
-                      href={`https://instagram.com/${creator.instagram}`}
+                      href={`https://tiktok.com/@${creator.tiktok}`}
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="flex items-center text-gray-600 dark:text-gray-300 hover:text-tiddle-purple dark:hover:text-tiddle-purple-light"
                     >
-                      <Instagram className="h-5 w-5 mr-1" />
-                      <span className="text-sm">Instagram</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 015.15-1.75V11.5a6.13 6.13 0 003.45 5.5v-4.2a9.6 9.6 0 01-1.38-.13v3.65a6.13 6.13 0 01-9.56-5.06A6.13 6.13 0 0119 11.51V2.05a4.83 4.83 0 003.94 1.45v-3.4a4.85 4.85 0 01-3.35 2.17z"/>
+                      </svg>
+                      <span className="text-sm">TikTok</span>
                     </a>
                     <a 
                       href={`/contact?creator=${creator.username}`}
