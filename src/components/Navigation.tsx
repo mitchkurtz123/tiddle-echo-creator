@@ -15,7 +15,7 @@ const Navigation: React.FC<NavigationProps> = ({
   const [isOpen, setIsOpen] = useState(false);
   
   return <nav className={cn("w-full py-6", className)}>
-      <div className="container mx-auto px-4 md:px-8 flex justify-between items-center">
+      <div className="container mx-auto px-4 md:px-8 flex justify-between items-center max-w-none">
         <div className="flex items-center">
           <Link to="/" className="flex items-center text-2xl font-bold text-gray-800 mr-10">
             <img 
