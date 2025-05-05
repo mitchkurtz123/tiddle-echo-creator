@@ -64,7 +64,7 @@ const Hero: React.FC = () => {
 
   // Cycle through words with a slower transition and 20% longer delay
   useEffect(() => {
-    // Increasing the interval from 3000ms to 3600ms (20% increase)
+    // Increasing the interval from 3000ms to 4000ms for more elegance
     const interval = setInterval(() => {
       setIsAnimating(true);
       
@@ -72,13 +72,13 @@ const Hero: React.FC = () => {
       const next = (currentWordIndex + 1) % rotatingWords.length;
       setNextWordIndex(next);
       
-      // Wait for exit animation to complete (extended)
+      // Wait for exit animation to complete (extended for more elegance)
       setTimeout(() => {
         setCurrentWordIndex(next);
         setIsAnimating(false);
-      }, 800); // Duration for the transition
+      }, 1200); // Increased from 800ms to 1200ms for a more graceful transition
       
-    }, 3600); // Increased from 3000ms to 3600ms (20% increase)
+    }, 4000); // Increased from 3600ms to 4000ms for a more elegant timing
     
     return () => clearInterval(interval);
   }, [currentWordIndex]);
@@ -98,7 +98,7 @@ const Hero: React.FC = () => {
               <span className="h-[1.2em] relative block overflow-hidden">
                 {/* Current word that animates out */}
                 <span 
-                  className={`text-tiddle-purple absolute inset-0 transition-all duration-800 ease-in-out ${
+                  className={`text-tiddle-purple absolute inset-0 transition-all duration-1200 ease-in-out ${
                     isAnimating ? 'transform -translate-y-full opacity-0' : 'transform translate-y-0 opacity-100'
                   }`}
                 >
@@ -108,8 +108,8 @@ const Hero: React.FC = () => {
                 {/* Next word that animates in from below */}
                 {isAnimating && (
                   <span 
-                    className="text-tiddle-purple absolute inset-0 transition-all duration-800 ease-in-out transform translate-y-full opacity-100"
-                    style={{ animation: "slideUp 800ms ease-in-out forwards" }}
+                    className="text-tiddle-purple absolute inset-0 transition-all duration-1200 ease-in-out transform translate-y-full opacity-100"
+                    style={{ animation: "slideUpElegant 1200ms cubic-bezier(0.42, 0, 0.58, 1) forwards" }}
                   >
                     {rotatingWords[nextWordIndex]}
                   </span>
@@ -180,17 +180,28 @@ const Hero: React.FC = () => {
         </div>
       </div>
       
-      {/* Add the keyframes for the slide up animation */}
-      <style jsx global>{`
-        @keyframes slideUp {
+      <style>{`
+        @keyframes slideUpElegant {
           0% {
             transform: translateY(100%);
             opacity: 0;
+          }
+          20% {
+            transform: translateY(80%);
+            opacity: 0.2;
+          }
+          60% {
+            transform: translateY(40%);
+            opacity: 0.6;
           }
           100% {
             transform: translateY(0);
             opacity: 1;
           }
+        }
+        
+        .duration-1200 {
+          transition-duration: 1200ms;
         }
       `}</style>
     </div>
