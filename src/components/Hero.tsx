@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
   const [api, setApi] = useState<CarouselApi>();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const [isChanging, setIsChanging] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   // Update current slide index when carousel changes
   useEffect(() => {
@@ -64,17 +64,16 @@ const Hero: React.FC = () => {
   // Cycle through words every 3 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      setIsChanging(true);
+      setIsAnimating(true);
       
-      // Wait for fade-out animation to complete
       setTimeout(() => {
         setCurrentWordIndex((prevIndex) => (prevIndex + 1) % rotatingWords.length);
-        
-        // Trigger fade-in animation
-        setTimeout(() => {
-          setIsChanging(false);
-        }, 50);
-      }, 300); // Match this to your CSS transition time
+      }, 500); // Wait for the exit animation before changing the word
+      
+      // Reset animation state after the complete animation cycle
+      setTimeout(() => {
+        setIsAnimating(false);
+      }, 1000); // Total animation duration
     }, 3000);
     
     return () => clearInterval(interval);
@@ -92,9 +91,11 @@ const Hero: React.FC = () => {
           <div className="space-y-6">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               Your Shortcut to <br />
-              <span className="relative inline-block h-[1.2em] overflow-hidden">
+              <span className="h-[1.2em] relative block overflow-hidden">
                 <span 
-                  className={`text-tiddle-purple absolute transition-all duration-300 ${isChanging ? 'opacity-0 transform -translate-y-8' : 'opacity-100 transform translate-y-0'}`}
+                  className={`text-tiddle-purple inline-block transition-all duration-500 ${
+                    isAnimating ? 'transform -translate-y-full opacity-0' : 'transform translate-y-0 opacity-100'
+                  }`}
                 >
                   {rotatingWords[currentWordIndex]}
                 </span>
