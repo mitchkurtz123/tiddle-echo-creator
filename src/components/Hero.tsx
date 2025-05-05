@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { 
@@ -17,7 +16,9 @@ const slideImages = [
   "/lovable-uploads/beea9f3b-5121-4d1b-8501-fafde6f2e025.png",
   "/lovable-uploads/a0becbb8-ba80-4bff-a517-d7189e3b83dc.png",
   "/lovable-uploads/c0e9f30a-f8d6-45e8-ac05-901c200bade7.png",
-  "/lovable-uploads/bdd5ebbb-b9fc-41b3-bfc4-cdc45642a58b.png"
+  "/lovable-uploads/bdd5ebbb-b9fc-41b3-bfc4-cdc45642a58b.png",
+  "/lovable-uploads/b381fa77-26cf-459e-af7f-24af55bcc0b6.png",
+  "/lovable-uploads/ea4eb3f2-b72e-4f29-b3b2-e40a941fcfac.png"
 ];
 
 const Hero: React.FC = () => {
