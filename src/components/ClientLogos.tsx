@@ -6,6 +6,7 @@ import {
   CarouselItem 
 } from "@/components/ui/carousel";
 import { AspectRatio } from '@/components/ui/aspect-ratio';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 // Brand logos from uploaded images
 const brands = [
@@ -45,6 +46,7 @@ const circleColors = [
 
 const ClientLogos: React.FC = () => {
   const [api, setApi] = useState<any>(null);
+  const isMobile = useIsMobile();
 
   // Set up auto scrolling
   useEffect(() => {
@@ -73,8 +75,9 @@ const ClientLogos: React.FC = () => {
         <CarouselContent className="-ml-2 py-2">
           {brands.map((brand, index) => (
             <CarouselItem key={index} className="basis-1/3 xs:basis-1/3 sm:basis-1/4 md:basis-1/5 lg:basis-1/6 px-1">
-              <div className={`p-0.5 rounded-full ${circleColors[index % circleColors.length]} border-2 flex items-center justify-center bg-white dark:bg-gray-900`}>
-                <div className="rounded-full h-14 w-14 sm:h-16 sm:w-16 md:h-20 md:w-20 flex items-center justify-center overflow-hidden bg-white">
+              {isMobile ? (
+                // Mobile version without borders
+                <div className="rounded-full h-14 w-14 sm:h-16 sm:w-16 md:h-20 md:w-20 flex items-center justify-center overflow-hidden bg-white dark:bg-gray-900 mx-auto">
                   <AspectRatio ratio={1/1} className="w-full h-full flex items-center justify-center">
                     <img 
                       src={brand.logo} 
@@ -83,7 +86,20 @@ const ClientLogos: React.FC = () => {
                     />
                   </AspectRatio>
                 </div>
-              </div>
+              ) : (
+                // Desktop version with colored borders
+                <div className={`p-0.5 rounded-full ${circleColors[index % circleColors.length]} border-2 flex items-center justify-center bg-white dark:bg-gray-900`}>
+                  <div className="rounded-full h-14 w-14 sm:h-16 sm:w-16 md:h-20 md:w-20 flex items-center justify-center overflow-hidden bg-white">
+                    <AspectRatio ratio={1/1} className="w-full h-full flex items-center justify-center">
+                      <img 
+                        src={brand.logo} 
+                        alt={`${brand.name} logo`} 
+                        className="max-h-[70%] max-w-[70%] object-contain" 
+                      />
+                    </AspectRatio>
+                  </div>
+                </div>
+              )}
             </CarouselItem>
           ))}
         </CarouselContent>
