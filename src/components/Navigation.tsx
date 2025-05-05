@@ -18,7 +18,6 @@ const Navigation: React.FC<NavigationProps> = ({
       <div className="container mx-auto px-4 md:px-8 flex justify-between items-center">
         <div className="flex items-center">
           <Link to="/" className="flex items-center text-2xl font-bold text-gray-800 mr-10">
-            <img src="/lovable-uploads/0788fa2d-97dc-4fbc-a56b-dcc61c27bb32.png" alt="Tiddle Logo" className="h-8 mr-2" />
             <span className="text-tiddle-purple">Tiddle</span>.io
           </Link>
           <div className="hidden md:flex space-x-8">
@@ -44,7 +43,6 @@ const Navigation: React.FC<NavigationProps> = ({
           <DrawerContent className="w-full max-h-[85vh] bg-white p-6 rounded-t-xl">
             <div className="flex items-center justify-between mb-6 my-[10px]">
               <Link to="/" className="flex items-center text-xl font-bold" onClick={() => setIsOpen(false)}>
-                <img src="/lovable-uploads/0788fa2d-97dc-4fbc-a56b-dcc61c27bb32.png" alt="Tiddle Logo" className="h-7 mr-2" />
                 <span className="text-tiddle-purple">Tiddle</span>.io
               </Link>
               <DrawerClose className="p-1 rounded-full hover:bg-gray-100 transition-colors">
