@@ -74,7 +74,7 @@ const Hero: React.FC = () => {
       setTimeout(() => {
         setIsAnimating(false);
       }, 1000); // Total animation duration
-    }, 3000);
+    }, 4000);
     
     return () => clearInterval(interval);
   }, []);
