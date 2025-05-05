@@ -46,7 +46,7 @@ const creators: Creator[] = [
     name: "paul",
     username: "@paultooreall",
     bio: "Tech reviewer and digital lifestyle content creator. Sharing the latest gadget reviews and productivity tips.",
-    imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    imageUrl: "public/lovable-uploads/c4835c77-bd82-4bee-af86-e8a12a7b89a7.png",
     instagram: "paultooreall",
   },
   {
