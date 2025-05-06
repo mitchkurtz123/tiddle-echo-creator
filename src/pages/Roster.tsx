@@ -44,7 +44,7 @@ const creators: Creator[] = [
   {
     name: "paul",
     username: "@paultooreall",
-    bio: "Tech reviewer and digital lifestyle content creator. Sharing the latest gadget reviews and productivity tips.",
+    bio: "Paul is a lifestyle and skit creator known for his relatable content and comedic videos.",
     imageUrl: "/lovable-uploads/c4835c77-bd82-4bee-af86-e8a12a7b89a7.png",
     tiktok: "paultooreall",
   },
@@ -58,7 +58,7 @@ const creators: Creator[] = [
   {
     name: "Zuza",
     username: "@zuzas.healing0",
-    bio: "Wellness and mindfulness influencer focusing on mental health awareness and holistic healing practices.",
+    bio: "Zuza is known for her get ready with me videos, telling her story, and spreading positivity to her audience.",
     imageUrl: "/lovable-uploads/162011a2-666a-4973-936a-87045a9222b3.png",
     tiktok: "zuzas.healing0",
   },
