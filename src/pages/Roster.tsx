@@ -44,7 +44,7 @@ const creators: Creator[] = [
   {
     name: "paul",
     username: "@paultooreall",
-    bio: "Paul is a lifestyle and skit creator known for his relatable content and comedic videos.",
+    bio: "Paul (PaultooReall) creates relatable and humorous content on YouTube, TikTok, Instagram and Snapchat. He highlights his life, friendships and travels and represents sounds and brands with an upbeat and trending approach.",
     imageUrl: "/lovable-uploads/c4835c77-bd82-4bee-af86-e8a12a7b89a7.png",
     tiktok: "paultooreall",
   },
