@@ -1,4 +1,4 @@
-# Welcome to your Lovable project
+# Tiddle.io
 
 ## Project info
 Tiddle.io Main Site
