@@ -84,11 +84,11 @@ const creators: Creator[] = [
     tiktok: "ayiahsoufi_",
   },
   {
-    name: "mysterious",
-    username: "@mysterious.girl7708",
-    bio: "Julia brings has standout personalities: the awkward, ‘rizz queen’ on @mysterious.girl7708, and a beauty-loving, GRWM creator on @julia.hill1.",
-    imageUrl: "/lovable-uploads/b0637d4f-530b-4e49-b718-1f51789cdf3e.png",
-    tiktok: "mysterious.girl7708",
+    name: "Jiji",
+    username: "@jiji.wonder",
+    bio: "Jiji Wonderis a 16-year-old Lebanese-American content creator best known for her energetic pranks, challenges, and dance videos across TikTok, YouTube, and Instagram. A member of the viral “Wonder Family,” she has built a multi-million–follower audience with her playful, family-centered content.",
+    imageUrl: "/lovable-uploads/jiji.jpeg",
+    tiktok: "jiji.wonder",
   },
   {
     name: "Aggayucita",
@@ -160,14 +160,14 @@ const Roster: React.FC = () => {
               Looking to collaborate with our creators?
             </h2>
             <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
-              We connect brands with the perfect influencers to tell their story. 
+              We connect brands with our 70+ signed creators to tell their story. 
               Our team handles everything from creator selection to campaign execution.
             </p>
             <Button 
               className="bg-tiddle-purple hover:bg-tiddle-purple/90 text-white px-8 py-2.5 rounded-full text-lg"
               onClick={() => window.location.href = '/contact'}
             >
-              Start a Campaign
+              Request Full Roster
             </Button>
           </div>
         </div>
