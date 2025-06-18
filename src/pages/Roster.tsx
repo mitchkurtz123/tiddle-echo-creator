@@ -86,7 +86,7 @@ const creators: Creator[] = [
   {
     name: "Jiji",
     username: "@jiji.wonder",
-    bio: "Jiji Wonderis a 16-year-old Lebanese-American content creator best known for her energetic pranks, challenges, and dance videos across TikTok, YouTube, and Instagram. A member of the viral “Wonder Family,” she has built a multi-million–follower audience with her playful, family-centered content.",
+    bio: "Jiji is a 16-year-old Lebanese-American content creator best known for her energetic pranks, challenges, and dance videos across TikTok, YouTube, and Instagram. A member of the viral “Wonder Family,” she has built a multi-million–follower audience with her playful, family-centered content.",
     imageUrl: "/lovable-uploads/jiji.jpeg",
     tiktok: "jiji.wonder",
   },
